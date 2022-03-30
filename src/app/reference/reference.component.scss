@@ -1,0 +1,32 @@
+
+.ref-card{
+  margin: 16px;
+}
+
+.filter{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.ref-title{
+  line-height: 1.2em;
+}
+
+.card-actions{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ref-url{
+  background-color: white;
+  mat-icon{
+    color: black;
+  }
+}
+
+.ref-search{
+  width: 100%;
+  margin: 16px;
+}

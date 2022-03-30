@@ -1,0 +1,20 @@
+.header-container {
+  display: flex;
+  gap: 2.5%;
+  align-items: center;
+}
+
+.delete-button {
+  padding: 0;
+  height: 10%;
+  width: 10%;
+  color: rgb(243, 40, 26);
+}
+
+.uri-input {
+  height: 16px;
+  border: 2px solid black;
+  padding: 8px;
+  width: 40%;
+}
+

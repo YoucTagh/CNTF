@@ -1,0 +1,75 @@
+<p class="page-title">Available Implementation</p>
+
+<div class="content-text">
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header"><sup>[1]</sup> RDF Presentation</span>
+    </div>
+    <div>
+      <div>
+        For a given range of RDF graphs and a specific media types, an RDF
+        Presentation is a combination of lifting, lowering, and validation
+        rules. With these rules, one can coherently interpret a representation
+        as RDF (lift), validate the RDF graph, and generate back the
+        representation from the RDF graph (lower).
+      </div>
+      <div>
+        While sending any kind of document, potentially lightweight, an HTTP
+        server/client may refer to the specific RDF Presentation that is used.
+        Then, the HTTP client/server can lift the document to RDF, and validate
+        it.
+      </div>
+      <div>
+        Similarly, while requesting for an RDF graph, an HTTP server/client may
+        inform the client/server what representation it prefers. Then, the
+        client/server can validate the RDF graph, then lower it into a document
+        [44].
+      </div>
+    </div>
+  </div>
+
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header"
+        ><sup>[2]</sup> The CC/PP exchange protocol</span
+      >
+    </div>
+    <div>
+      <div>
+        The CC/PP exchange protocol based on the HTTP Extension Framework. CC/PP
+        "Composite Capability/Preference Profiles: A user side framework for
+        content negotiation", is an extensible format based on RDF for
+        describing device capabilities and user preferences [27].
+      </div>
+    </div>
+  </div>
+
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+    <div class="title-header-container">
+      <span class="title-header">Footnotes</span>
+    </div>
+    <div>
+      <a href="https://github.com/thesmartenergy/rdfp" target="_blank"
+        ><sup>[1]</sup>
+      </a>
+      : <span>RDF Presentation and RDF Presentation Negotiation.</span>
+    </div>
+    
+    <div>
+      <a href="https://www.w3.org/TR/NOTE-CCPPexchange#6" target="_blank"
+        ><sup>[2]</sup>
+      </a>
+      : <span>Examples of CC/PP exchange protocol.</span>
+    </div>
+    
+  </div>
+</div>

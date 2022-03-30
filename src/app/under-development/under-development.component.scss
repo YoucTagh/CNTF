@@ -1,0 +1,22 @@
+/*.content{
+    height: 250px;
+    font-size: 2rem;
+    line-height: 1.6;
+    margin: 16px;
+}
+
+.image-construction{
+    float: left;
+}
+
+.text-construction{
+    
+}*/
+
+.content{
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    font-size: 1.2rem;
+    gap: 5%;
+}

@@ -1,0 +1,120 @@
+<p class="page-title">Use case: Accuracy (precision) of measurements</p>
+
+<div class="content-text">
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Description</span>
+    </div>
+    <div>
+      John is involved in a project on climate change. The objective is to
+      identify new causes, effects and to follow the evolution of these problems
+      over time. To do this, many measurements (temperature, humidity, wind
+      speed, etc.) are needed in several regions.
+    </div>
+    <div>
+      During his data collection, he noticed that some APIs return values with
+      heterogeneous accuracy. Or worse, the measurements queried are raw data
+      and he has to read the documentation to convert them to meet his needs.
+    </div>
+    <div>
+      To ease this burden for other users interested in collecting metrics but
+      needing different precision and units, he set out to create a portal that
+      queries data from multiple sources and offers it based on specific
+      accuracy(precision) constraints.
+    </div>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Requirements</span>
+    </div>
+    <ul>
+      <li>
+        The client needs to convey the preferred unit of measure along with the
+        accuracy.
+      </li>
+      <li>
+        The server needs to be able to tell the client which unit of measure and
+        accuracy is used in the response.
+      </li>
+      <li>
+        The server needs to be able to convert data from raw to rdf and
+        vice-versa.
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Solutions</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          Use The Unified Code for Units of Measure (UCUM) as the default metric
+          and utilizing content negotiation to adapt it to different
+          representations.
+        </li>
+        <li>
+          To bridge the gap between raw and elevated data, use mapping
+          techniques or lowering and lifting procedures; the sparql generation
+          service is an example.
+        </li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Content negotiation dimensions</span>
+    </div>
+    <span>
+      <ul>
+        <li><a routerLink="/dimension/profile">Profile.</a></li>
+        <li><a routerLink="/dimension/unit">Unit.</a></li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Links</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a href="https://docs.geostandaarden.nl/api/API-Strategie-ext/#crs-negotiation" target="_blank"
+            >API Design rules Extensions.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Other use cases</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/#ID15" target="_blank"
+            >Modeling data precision and accuracy.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+  </div>
+</div>

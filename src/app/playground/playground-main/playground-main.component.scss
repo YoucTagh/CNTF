@@ -1,0 +1,100 @@
+.content-text {
+  font-size: 1.2rem;
+  margin: 16px;
+  line-height: 1.2em;
+}
+.title-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.title-header {
+  padding: 8px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgb(110, 110, 110);
+}
+
+.page-part {
+  margin-top: 16px;
+}
+
+.playground-container {
+  border-radius: 8px;
+  margin-top: 16px;
+  padding: 16px;
+  color: rgb(98, 98, 98);
+}
+
+.pg-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  font-size: 1.4rem;
+
+  color: rgb(255, 255, 255);
+  background-color: rgb(58, 57, 57);
+  padding: 16px;
+}
+
+.method-select {
+  width: 15%;
+}
+
+.uri-input {
+  width: calc(85% - 82px );
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.send-button {
+  width: 50px;
+  height: 50px;
+}
+
+.query-container {
+  display: flex;
+  justify-content: center;
+  border: 3px solid black;
+}
+.request-container {
+  width: 50%;
+  border-right: 3px solid black;
+  padding: 8px;
+}
+
+.response-container {
+  width: 50%;
+  padding: 8px;
+}
+
+.middle-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  span {
+    background-color: rgb(173, 173, 173);
+    color: black;
+    font-weight: bold;
+    padding: 16px;
+  }
+}
+
+.headers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.add-header {
+  width: 100%;
+  margin-top: 16px;
+  background-color: rgb(171, 252, 146);
+}

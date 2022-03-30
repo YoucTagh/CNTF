@@ -1,0 +1,85 @@
+<p class="page-title">Reactive Content Negotiation</p>
+
+<div class="content-text">
+  <div class="usecase-part">
+    <div class="title-header-container">
+      <span class="title-header">Description</span>
+    </div>
+    <span
+      >If the server receives an ambiguous request, it sends a list of the
+      different alternatives it has. The user agent can make the choice if it
+      has sufficient knowledge of the user's preferences. Otherwise, it displays
+      the list of links for the user to make the final choice.</span
+    >
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Example</span>
+    </div>
+    <span>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Use cases</span>
+    </div>
+    <span>
+      <ul>
+        <a routerLink="/usecase/mfml"></a>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Advantages and Disadvantages</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Advantages</th>
+          <th>Disadvantages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <ul>
+              <li>
+                The server is unable to determine the capacity of the user agent
+                via the headers, which implies more privacy.
+              </li>
+              <li>The cache is used to reduce network overhead.</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>
+                Latency due to the round trip to select the representation.
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <hr />
+
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+  </div>
+</div>

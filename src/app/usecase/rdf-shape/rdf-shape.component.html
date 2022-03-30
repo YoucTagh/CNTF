@@ -1,0 +1,150 @@
+<p class="page-title">Use case: Negotiation of RDF shapes</p>
+
+<div class="content-text">
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Description</span>
+    </div>
+    <div>
+      John is a researcher interested in the evolution of youth unemployment in
+      different societies; he needs data in the form of RDF data graphs. To do
+      this, he queries the data graphs available in various Web APIs queried by
+      the university portal. These scenarios are plausible:
+      <ul>
+        <li>
+          Scenario 1 - The shape is also important: John needs a representation
+          that conforms to a specific shape. Therefore, vocabulary negotiation
+          is not enough because he would have to manually validate all returned
+          data graphs with the desired vocabularies.
+        </li>
+        <li>
+          Scenario 2 - Flexibility vs rigidity: In scenario 1, the negotiation
+          can be rigid in case John wants <b>all</b> the constraints to be
+          valid, and prefers not to have an answer otherwise. Else, the
+          negotiation can be flexible in case he agrees to receive a
+          representation even if it does not satisfy all the constraints.
+        </li>
+        <li>
+          Scenario 3 - Not all constraints are equally important: For John, not
+          all shape constraints have the same degree of importance. He therefore
+          wants a way to express this importance for each constraint and to
+          obtain the representation that minimizes the violation rate by taking
+          it into account.
+        </li>
+      </ul>
+
+      <span> </span>
+    </div>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Requirements</span>
+    </div>
+    <ul>
+      <li>
+        The client or server needs to compute the violation degree for an RDF
+        graph with respect to a shape document.
+      </li>
+      <li>
+        The client needs to convey RDF shape constraints with severities and a
+        violation threshold as preferences.
+      </li>
+      <li>
+        The server needs to convey a representation together with the validation
+        report.
+      </li>
+      <li>
+        The server needs to convey validation reports an let the client choose a
+        representation.
+      </li>
+      <li>
+        The server needs to convey a validation report along with an error code.
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Solution</span>
+    </div>
+    <span>
+      <ul>
+        <li>SHACL, ShEx to express a shape documents.</li>
+        <li>
+          HTTP q-values as potential solution for expressing violation
+          thresholds.
+        </li>
+        <li>
+          Profile negotiation to convey RDF shape constraints with severities.
+        </li>
+        <li>SHACL to express shape severity.</li>
+        <li>
+          HTTP response code 406 (Not acceptable) to convey validation failure.
+        </li>
+        <li>
+          HTTP response code 300 (Multiple Choices) for listing available
+          variants.
+        </li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Content negotiation dimensions</span>
+    </div>
+    <span>
+      <ul>
+        <li><a routerLink="/dimension/profile">Profile.</a></li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Links</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/" target="_blank"
+            >Dataset Exchange Use Cases and Requirements.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Other use cases</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/#ID5" target="_blank"
+            >Discover available content profiles.</a
+          >
+        </li>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/#ID41" target="_blank"
+            >Vocabulary constraints.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+  </div>
+</div>

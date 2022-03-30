@@ -1,0 +1,8 @@
+<div class="header-container">
+  <mat-checkbox [(ngModel)]="header.selected" color="primary"></mat-checkbox>
+  <input [(ngModel)]="header.key" class="uri-input" />
+  <input [(ngModel)]="header.value" class="uri-input" />
+  <button (click)="delete()" class="delete-button">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>

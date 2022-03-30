@@ -1,0 +1,30 @@
+variables:
+  SSH_PRIVATE: <my_private_key>
+
+build:
+  image: maximelefrancois86/scully-docker:latest
+  stage: build
+  cache:
+    - key: scully
+      paths:
+        - package-lock.json
+        - node_modules
+  script: 
+    - npm install
+    - npm run build -- --base-href /cntf/ --deploy-url /cntf/
+    - cp .gitlab-htaccess dist/conneg-tf/.htaccess
+  artifacts:
+    paths:
+      - dist
+
+deploy:
+  image: maximelefrancois86/alpine-ssh-rsync
+  stage: deploy
+  script:
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - rsync -rtcva --delete dist/conneg-tf/ yousouf.taghzouti@ci.mines-stetienne.fr:/var/www/html/cntf/
+  only:
+  - main

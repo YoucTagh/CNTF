@@ -1,0 +1,77 @@
+<p class="page-title">Welcome To Content Negotiation Playground!!</p>
+
+<div class="content-text">
+  <div class="page-part">
+    <span class="title-header">Title:</span>
+    <span> MIME content negotiation </span>
+  </div>
+  <div class="page-part">
+    <span class="title-header">Description:</span>
+    <span> </span>
+  </div>
+
+  <div class="page-part">
+    <span class="title-header">How To use:</span>
+    <span> </span>
+  </div>
+  <div class="playground-container mat-elevation-z2">
+    <span class="pg-title">Playground</span>
+    <div class="method-container">
+      <mat-form-field appearance="fill" class="method-select">
+        <mat-label>Method</mat-label>
+        <mat-select [(value)]="selectedMethods">
+          <mat-option *ngFor="let method of methods" [value]="method">
+            {{ method }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="uri-input">
+        <mat-label>URI</mat-label>
+        <input matInput placeholder="http://example.com" [(ngModel)]="url" type="url" />
+      </mat-form-field>
+
+      <button matButton (click)="sendRequest()" class="send-button">
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+
+    <div>
+      <span>Curl:</span>
+      <div class="code-area">
+        curl --location --request GET 'www.museum.example.com/artwork/45' \
+        --header 'Accept: text/html;q=0.9, image/png;q=0.7,image/svg+xml;q=0.8'
+      </div>
+    </div>
+
+    <div>
+      <span *ngFor="let header of headers">
+        {{ header.selected }}-{{ header.key }}-{{ header.value }}
+      </span>
+    </div>
+
+    <div class="query-container">
+      <div class="request-container">
+        <div class="middle-title">
+          <span>Headers</span>
+        </div>
+        <div class="headers-container">
+          <playground-header-item
+            *ngFor="let header of headers"
+            [header]="header"
+            (deleteRequest)="crossOffItem($event)"
+          >
+          </playground-header-item>
+        </div>
+        <button matButton (click)="addNewHeader()" class="add-header">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      <div class="response-container">
+        <div class="middle-title">
+          <span>Response</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

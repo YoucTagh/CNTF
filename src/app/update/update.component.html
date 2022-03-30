@@ -1,0 +1,29 @@
+<p class="page-title">List of updates</p>
+
+<div class="content-text">
+  <span>
+    This page contains the list of updates, the added features and the
+    <b>future</b> ones. Each update has a <b>date</b> and a brief description of
+    the made <b>additions</b>.
+  </span>
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Future updates</span>
+    </div>
+    <div>
+      <ul *ngFor="let update of futureUpdates">
+        <li>{{ update }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+
+  <div *ngFor="let update of updates" class="update-item">
+      <mat-icon>date_range</mat-icon>
+      <span class="update-date">{{ update.date | date }}:</span>
+      <ul *ngFor="let addition of update.additions">
+        <li>{{ addition }}</li>
+      </ul>
+  </div>
+</div>

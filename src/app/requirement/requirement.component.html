@@ -1,0 +1,33 @@
+<p class="page-title">Content negotiation requirements</p>
+
+<div class="content-text">
+  <div class="page-description">
+    <span>
+      In each of the dimensions cited below you will find:
+      <ul>
+        <li>A <b>description</b> of the <em>requirement</em>.</li>
+        <li>
+          References to the <b> use cases</b> from which the <em>requirement</em> was
+          derived.
+        </li>
+      </ul>
+    </span>
+  </div>
+  <div>
+    <div class="title-header-container">
+      <span class="title-header">Requirements </span>
+    </div>
+    <div *ngFor="let req of requirements">
+      <b>{{ req.title }}</b> {{ req.description }} Extracted
+      from the usecase(s) [{{ req.useCases }}].
+    </div>
+  </div>
+
+  <div class="title-header-container">
+    <span class="title-header">UseCases</span>
+  </div>
+  <div *ngFor="let useCase of useCases">
+    <a routerLink="{{ useCase.link }}">[{{ useCase.id }}]</a>
+    : <span>{{ useCase.title }}.</span>
+  </div>
+</div>

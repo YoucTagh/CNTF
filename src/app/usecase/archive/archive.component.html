@@ -1,0 +1,112 @@
+<p class="page-title">Use case: Archiving versions</p>
+
+<div class="content-text">
+  <div class="usecase-part">
+    <div class="title-header-container">
+      <span class="title-header">Description</span>
+    </div>
+    <span>
+      Over the life of an enterprise, data models change and we want to archive
+      data to provide access to new as well as old versions. <em>Anna</em> is
+      maintaining an API that is consumed by various softwares, some could be
+      easily updated but some are legacy applications. <br />
+      The API got a major update making it backward incompatible and
+      <em>Anna</em>
+      wants to give support to both versions.
+      <div class="code-area">
+        https://www.archive.example.com/url/to/resource/{{ "{id}" }}
+      </div>
+    </span>
+  </div>
+
+  <hr />
+  <div class="usecase-part">
+    <div class="title-header-container">
+      <span class="title-header">Requirements</span>
+    </div>
+    <div>
+      <ul>
+        <li>
+          Serve different versions of the resource under the same URI, at
+          different times.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+  <div class="usecase-part">
+    <div class="title-header-container">
+      <span class="title-header">Solutions</span>
+    </div>
+    <span>
+      <ul>
+        <li></li>
+      </ul>
+    </span>
+  </div>
+
+  <hr />
+  <div class="usecase-part">
+    <div class="title-header-container">
+      <span class="title-header">Content negotiation dimensions</span>
+    </div>
+    <span>
+      <ul>
+        <li><a routerLink="/dimension/version">Version.</a></li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Links</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/" target="_blank"
+            >Dataset Exchange Use Cases and Requirements.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Other use cases</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/#ID4" target="_blank"
+            >Dataset Versioning Information.</a
+          >
+        </li>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/#ID38" target="_blank"
+            >Time-related aspects.</a
+          >
+        </li>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/#ID44" target="_blank"
+            >Identification of versioned datasets and subsets.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+  </div>
+</div>

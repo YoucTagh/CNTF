@@ -1,0 +1,45 @@
+<p class="page-title">Abbreviations and acronyms</p>
+
+<div class="content-text">
+  <div class="abb-list">
+    <div class="abb-header-container">
+      <span class="abb-header">Abbreviations for conferences</span>
+    </div>
+    <div *ngFor="let abb of abbConferences" class="abb-content">
+      <span class="abb-title">{{ abb.title }}</span>
+      --
+      <span
+        class="abb-description"
+        [innerHTML]="abb.description | boldStar"
+      ></span>
+    </div>
+  </div>
+  <hr />
+  <div class="abb-list">
+    <div class="abb-header-container">
+      <span class="abb-header">Abbreviations for volumes</span>
+    </div>
+    <div *ngFor="let abb of abbVolumes" class="abb-content">
+      <span class="abb-title">{{ abb.title }}</span>
+      --
+      <span
+        class="abb-description"
+        [innerHTML]="abb.description | boldStar"
+      ></span>
+    </div>
+  </div>
+  <hr />
+  <div class="abb-list">
+    <div class="abb-header-container">
+      <span class="abb-header">Acronyms</span>
+    </div>
+    <div *ngFor="let abb of acronyms" class="abb-content">
+      <span class="abb-title">{{ abb.title }}</span>
+      --
+      <span
+        class="abb-description"
+        [innerHTML]="abb.description | boldStar"
+      ></span>
+    </div>
+  </div>
+</div>

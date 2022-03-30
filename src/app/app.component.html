@@ -1,0 +1,202 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  Content Negotiation Theoretical Framework
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://www.nicepng.com/png/detail/399-3991521_negotiation-cooperative-icon.png"
+    />
+
+    <h4 class="name">CNTF</h4>
+    <p class="designation">Yousouf TAGHZOUTI</p>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/home">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <mat-expansion-panel class="expansion-panel">
+      <mat-expansion-panel-header class="nav-head">
+        <mat-panel-title>
+          <mat-icon>build</mat-icon>
+          <span>CN Use Case</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <button mat-button class="menu-button" routerLink="/usecase">
+        <mat-icon>list</mat-icon>
+        <span>Use Cases List</span>
+      </button>
+      <div class="nav-section">
+        <button
+          *ngFor="let useCase of useCases"
+          mat-button
+          class="menu-button"
+          [routerLink]="useCase.link"
+        >
+          <mat-icon>{{ useCase.icon }}</mat-icon>
+          <span>{{ useCase.title }}</span>
+        </button>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="expansion-panel">
+      <mat-expansion-panel-header class="nav-head">
+        <mat-panel-title>
+          <mat-icon>extension</mat-icon>
+          <span>CN Dimension</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <button mat-button class="menu-button" routerLink="/dimension">
+        <mat-icon>list</mat-icon>
+        <span>Dimensions List</span>
+      </button>
+      <div class="nav-section">
+        <button mat-button class="menu-button" routerLink="/dimension/mime">
+          <mat-icon>extension</mat-icon>
+          <span>MIME type</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/dimension/language">
+          <mat-icon>extension</mat-icon>
+          <span>Language</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/dimension/encoding">
+          <mat-icon>extension</mat-icon>
+          <span>Encoding</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/dimension/charset">
+          <mat-icon>extension</mat-icon>
+          <span>Char-set</span>
+        </button>
+        <button
+          mat-button
+          class="menu-button"
+          routerLink="/dimension/capability"
+        >
+          <mat-icon>extension</mat-icon>
+          <span>Capability</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/dimension/profile">
+          <mat-icon>extension</mat-icon>
+          <span>Profile</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/dimension/version">
+          <mat-icon>extension</mat-icon>
+          <span>Version</span>
+        </button>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="expansion-panel">
+      <mat-expansion-panel-header class="nav-head">
+        <mat-panel-title>
+          <mat-icon>whatshot</mat-icon>
+          <span>CN Style</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <button mat-button class="menu-button" routerLink="/style">
+        <mat-icon>list</mat-icon>
+        <span>Styles List</span>
+      </button>
+      <div class="nav-section">
+        <button mat-button class="menu-button" routerLink="/style/proactive">
+          <mat-icon>whatshot</mat-icon>
+          <span>Proactive</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/style/reactive">
+          <mat-icon>whatshot</mat-icon>
+          <span>Reactive</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/style/transparent">
+          <mat-icon>whatshot</mat-icon>
+          <span>Transparent</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/style/conditional">
+          <mat-icon>whatshot</mat-icon>
+          <span>Conditional</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/style/active">
+          <mat-icon>whatshot</mat-icon>
+          <span>Active</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/style/adaptive">
+          <mat-icon>whatshot</mat-icon>
+          <span>Adaptive</span>
+        </button>
+      </div>
+    </mat-expansion-panel>
+    <button mat-button class="menu-button" routerLink="/requirement">
+      <mat-icon>stars</mat-icon>
+      <span>CN Requirement</span>
+    </button>
+
+    <mat-expansion-panel class="expansion-panel">
+      <mat-expansion-panel-header class="nav-head">
+        <mat-panel-title>
+          <mat-icon>link</mat-icon>
+          <span>CN Tool</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <button mat-button class="menu-button" routerLink="/tool/available-impl">
+        <mat-icon>link</mat-icon>
+        <span>Available Impl</span>
+      </button>
+      <button mat-button class="menu-button" routerLink="/tool/available-server">
+        <mat-icon>link</mat-icon>
+        <span>Server Impl</span>
+      </button>
+    </mat-expansion-panel>
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/methodology">
+      <mat-icon>done_all</mat-icon>
+      <span>Methodology</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/terminology">
+      <mat-icon>textsms</mat-icon>
+      <span>Terminology</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/abbreviation">
+      <mat-icon>text_fields</mat-icon>
+      <span>Abbreviations</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/reference">
+      <mat-icon>my_location</mat-icon>
+      <span>References</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/maintenance">
+      <mat-icon>local_hospital</mat-icon>
+      <span>Maintenance</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/update">
+      <mat-icon>update</mat-icon>
+      <span>Updates</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/contribute">
+      <mat-icon>help</mat-icon>
+      <span>To Contribute</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="footer mat-elevation-z8">
+      You have found a problem or you have a contribution, please refer to 
+      <a routerLink="/contribute" target="_blank">this page</a>.
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

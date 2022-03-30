@@ -1,0 +1,144 @@
+<p class="page-title">Use case: Coordinate Reference System</p>
+
+<div class="content-text">
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Description</span>
+    </div>
+    <div>
+      Alice and Bob are both developers. While Bob is interested in creating a
+      delivery tracking module to trace the position of goods on the map,
+      Alice's task is to model the building and store IOT features and their
+      positions in order to select and monitor them graphically.
+    </div>
+    <div>
+      Both have in common that they are interested in the location of
+      geographical features. For this purpose, a coordinate reference system
+      (CRS) is used, either a local, regional or global system. They also intend
+      to have an API to request and return geometries using multiple CRS and not
+      just the default system (WGS84). Knowing that their use cases have
+      real-time constraints, and that the time required to complete a
+      transformation process is long, this adds a new layer of complexity.
+    </div>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Requirements</span>
+    </div>
+    <ul>
+      <li>The client needs to convey the preferred CRS.</li>
+      <li>
+        The server needs to be able to tell the client which CRS is used in the
+        response.
+      </li>
+      <li>The response time should not exceed a certain time threshold.</li>
+    </ul>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Solutions</span>
+    </div>
+
+    <ul>
+      <li>
+        Use of HTTP headers:
+        <ul>
+          <li>
+            Accept-Crs or Accept-Profile: used by the client to convey the
+            preferred CRS.
+          </li>
+          <li>
+            Content-Crs or Content-Profile: used by the server to convey the CRS
+            the response is using.
+          </li>
+        </ul>
+      </li>
+      <li>
+        As mentioned in [L4], consider non-regret, performing transformations in
+        advance and recording them, e.g., in ETRS89 and RD/Amersfoort, instead
+        of on-the-fly transformation, i.e., adaptive content negotiation.
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Content negotiation dimensions</span>
+    </div>
+    <span>
+      <ul>
+        <li><a routerLink="/dimension/profile">Profile.</a></li>
+        <li><a routerLink="/dimension/">CRS?.</a></li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Links</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/sdw-bp/#c-geometrycrs" target="_blank"
+            >Requesting different representations of geometries.</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/w3c/sdw/issues/757" target="_blank"
+            >Standardized CRS negotiation.</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/Maps4HTML/MapML/issues/11" target="_blank"
+            >Support agent-driven TCRS negotiation.</a
+          >
+        </li>
+        <li>
+          [L4] <a href="https://docs.geostandaarden.nl/api/API-Strategie-ext/#crs-negotiation" target="_blank"
+            >API Design rules Extensions.</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/w3c/sdw/" target="_blank"
+            >Spatial Data on the Web Working Group.</a
+          >
+        </li>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/" target="_blank"
+            >Dataset Exchange Use Cases and Requirements.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Other use cases</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/#ID28" target="_blank"
+            >Modeling reference systems.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<p class="page-title">Terminology</p>
+
+<div class="content-text">
+  <div *ngFor="let term of terms" class="term-content">
+    <span class="term-title">{{ term.title }}:</span>
+    <div *ngFor="let termDescription of term.descriptions">
+      <ul>
+        <li>
+          <span
+            class="term-description"
+            [innerHTML]="termDescription.description | boldStar"
+          >
+          </span>
+          <a
+            *ngIf="termDescription.reference != '-1'; else elseBlock"
+            routerLink="/reference"
+            fragment="{{ termDescription.reference }}"
+            target="_blank"
+          >
+            [{{ termDescription.reference }}]
+          </a>
+          <ng-template #elseBlock></ng-template>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="term-resemblance-container">
+  <div class="title-header-container">
+    <span class="title-header">Terminology resemblance</span>
+  </div>
+  <div *ngFor="let term of termsResemblance">
+    <div class="term-title">{{ term.title }}:</div>
+    <div>
+      <ul>
+        <li>
+          <span class="term-description" [innerHTML]="term.description"> </span>
+          <a
+            *ngIf="term.reference != -1; else elseBlock"
+            routerLink="/reference"
+            fragment="{{ term.reference }}"
+            target="_blank"
+          >
+            [{{ term.reference }}]
+          </a>
+          <ng-template #elseBlock></ng-template>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="reference-container">
+  <div class="title-header-container">
+    <span class="title-header">References</span>
+  </div>
+  <div *ngFor="let reference of references">
+    <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+      >[{{ reference.id }}]</a
+    >
+    : <span>{{ reference.title }}</span>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<p class="page-title">Dimensions Conveyance Type</p>
+
+<div class="content-text">
+  <div class="page-description">
+    <span>
+      Content negotiation dimension also knows as type of <b>constraints</b> or
+      <b>preferences</b>. In each of the dimensions cited below you will find:
+      <ul>
+        <li>A <b>description</b> of the <em>dimension</em>.</li>
+        <li>Some references to the pertinent <em>use cases</em>.</li>
+        <li>Some <b>examples</b> of the content negotiation process.</li>
+        <li>Some relevant <b>references on the state of the art</b>.</li>
+      </ul>
+    </span>
+  </div>
+  <div>
+    <h1>Dimensions</h1>
+    <ul>
+      <li>
+        <a routerLink="/dimension/mime">Dimension conveyance type #1</a>: MIME
+        type.
+      </li>
+      <li>
+        <a routerLink="/dimension/language">Dimension conveyance type #2</a>:
+        Language.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div>
+  * [ ] How to convey constraints is different with pros and cons as CN styles:
+  * HTTP headers by: * Accept * Accept-Language: * Accept-encoding: *
+  Accept-CRS: * Prefer/Preference profile="urn:example:schema" * Accept-Schema:
+  * Accept-Presentation: * Accept-Profile: * Link: * URL: * Archival Resource
+  Key (ARK) e.g. https://api.istex.fr/ark:/67375/6GQ-MLC8GRWC-5/ * Query String
+  Arguments (QSA) e.g.
+  http://linked.data.gov.au/dataset/gnaf/address/GAACT714845933?_view=ISO19160&_format=text/turtle
+  * [ ] In the query send the constraints as headers but in the response, send
+  the response + the parameters to use in the next requests to reduce overhead.
+</div>

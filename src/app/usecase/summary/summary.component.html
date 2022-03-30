@@ -1,0 +1,103 @@
+<p class="page-title">Use case: Content summary</p>
+
+<div class="content-text">
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Description</span>
+    </div>
+    <div>
+      Isabel is the head of a group of journalists specialized in new trends.
+      Her group has to collect, prepare and film every day to keep up with the
+      pace. So there's no question of wasting time reading long articles or
+      watching hours of streaming videos. That is why she decided to initiate
+      the creation of a service. On the one hand, it offers summaries of these
+      resources and alerts a journalist if interesting topics are detected. On
+      the other hand, it would expose them, in long and summarized form, to
+      other colleagues for further investigation.
+    </div>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Requirements</span>
+    </div>
+    <ul>
+      <li>
+        The client needs to convey summary constraint with options(length: by
+        words or paragraphs, language: formal or informal).
+      </li>
+      <li>
+        The client needs to express the topics of interest that should be
+        comprised in the summary.
+      </li>
+      <li>
+        The server needs to summarize the resources, for example, shorten a
+        10-page report to one page of points.
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Solutions</span>
+    </div>
+    <div>
+      <ul>
+        <li>HTTP header Accept: text/summarised or text/turtle+summarised</li>
+      </ul>
+    </div>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Content negotiation dimensions</span>
+    </div>
+    <span>
+      <ul>
+        <li><a routerLink="/dimension/profile">Profile?</a> link to vocabulary if we want the summary to contain a vocabulary</li>
+      </ul>
+    </span>
+  </div>
+  <!-- <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Links</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/" target="_blank"
+            >Dataset Exchange Use Cases and Requirements.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div> -->
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Other use cases</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/#ID33" target="_blank"
+            >Summarization/Characterization of datasets.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+  </div>
+</div>

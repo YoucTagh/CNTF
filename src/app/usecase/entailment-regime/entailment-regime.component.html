@@ -1,0 +1,108 @@
+<p class="page-title">Use case: Entailment regime</p>
+
+<div class="content-text">
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Description</span>
+    </div>
+    <div>
+      <div>
+        Lucy is the manager of a company that is a vendor of a SPARQL engine.
+        Their call center is constantly being asked what entailment regime they
+        support and how that ER is configured and enabled.
+      </div>
+      <div>
+        She wants to address this issue and provide a way to query the data
+        without needing to ask the vendor, and negotiate RDF graphs with
+        inferred triples according to a specific entailment regime.
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Requirements</span>
+    </div>
+    <ul>
+      <li>The client needs to convey the entailment regime.</li>
+      <li>
+        The server needs to convey a response with the requested entailment
+        regime or send an error message.
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Solutions</span>
+    </div>
+    <span>
+      <ul>
+        <li>Negotiation by profile as SHACL documents, use the sh:entailment with IRI indication [L1].</li>
+      </ul>
+    </span>
+  </div>
+  <hr />
+  <!-- <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Content negotiation dimensions</span>
+    </div>
+    <span>
+      <ul>
+        <li><a routerLink="/dimension/">.</a></li>
+      </ul>
+    </span>
+  </div>
+  <hr /> -->
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Links</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          [L1] <a href="https://www.w3.org/ns/entailment/" target="_blank"
+            >Unique URIs for Semantic Web Entailment Regimes.</a
+          >
+        </li>
+        <li>
+          <a href="https://stackoverflow.com/questions/25846506/how-to-specify-an-entailment-regime-in-sparql" target="_blank"
+            >How to specify an entailment-regime in SPARQL?</a
+          >
+        </li>
+        <li>
+          <a href="https://www.w3.org/blog/2010/01/unique_uri_s_for_semantic_web_entailment/" target="_blank"
+            >Unique URI-S for semantic web entailment regimes.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div>
+  <!-- <hr />
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header">Other use cases</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/dcat-ucr/#ID6" target="_blank"
+            >DCAT Distribution to describe web services.</a
+          >
+        </li>
+      </ul>
+    </span>
+  </div> -->
+  <hr />
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+  </div>
+</div>

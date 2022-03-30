@@ -1,0 +1,111 @@
+<p class="page-title">Server implementation</p>
+
+<div class="content-text">
+  <div class="page-part">
+    <div class="title-header-container">
+      <span class="title-header"> Content negotiation implementations </span>
+    </div>
+    <div>
+      <h1>Apache server</h1>
+      The Apache Hypertext Transfer Protocol Daemon (HTTPD) can select the best
+      representation of a resource using content negotiation as defined in
+      HTTP/1.1.This is done using client preferences for media type, language,
+      character set and finally encoding. The <em>mod_negotiation</em> module is
+      the one that provides content negotiation, and it is compiled by default.
+      HTTPD supports server-based content negotiation, <em>Accept</em>,
+      <em>Accept-Language</em>, <em>Accept-Charset</em> and
+      <em>Accept-Encoding</em> headers [47]. It also supports transparent content
+      negotiation, but not feature negotiation [6].There are two ways to provide
+      the server with the required information on each of the variants <sup>[1]</sup>:
+
+      <ul>
+        <li>
+          <b>With a <em>type-map</em> file</b> First, a file suffix must be
+          defined as <em>type-map</em> using a handler defined in the server
+          configuration file, usually expressed as follows:
+        </li>
+      </ul>
+      <div class="code-area">AddHandler type-map .var</div>
+      Each <em>type-map</em> file describing a resource must have the same name,
+      plus the .var extension. The description contains the media type,
+      language, en-coding, character set. Also the source qualities which
+      indicate the relative quality of the described variant compared to the
+      others available.
+      <ul>
+        <li>
+          <b>Multiviews</b> Using the per-directory option MultiViews with an
+          Options directive, allows the server in the case of the absence of the
+          /some/dir/foo resource to search for an existing representation named
+          foo.*. The MultiViews option must be set explicitly even if the
+          Options All directive is present.
+        </li>
+      </ul>
+      <h1>Spring framework</h1>
+      Spring also provides an implementation of content negotiation in a Spring
+      MVC project, primarily to determine the media type of a request. This is
+      achieved by one of these techniques [6]:
+      <ul>
+        <li>
+          <b>The URI suffixes (extensions)</b> In the requested URI, the
+          preferred media type can be passed using an extension (e.g.
+          .xml/.json). The framework can check for the existence of a path
+          extension, and for a service providing employee information, the
+          response to the following request:
+        </li>
+      </ul>
+      <div class="code-area">curl http://some/uri/employee/10.json</div>
+      is the json representation of this employee. And if xml is the desired
+      representation, the request should end with the xml extension:
+      <div class="code-area">curl http://some/uri/employee/10.xml</div>
+      The favorPathExtension value must be set to true to enable this approach.
+      <ul>
+        <li>
+          <b>The URI parameter</b> Similar to the previous technique, this time
+          instead of suffixing the URI with an extension, a defined favorite
+          parameter is used,e.g. ”format”, and the previous requests would look
+          like this:
+        </li>
+      </ul>
+      <div class="code-area">
+        curl http://some/uri/employee/10?mediaType=json
+      </div>
+      and
+      <div class="code-area">
+        curl http://some/uri/employee/10?mediaType=xml
+      </div>
+      The favorParameter value must be set to true and set a preferred
+      parameterName to enable this approach.
+      <br />
+      <ul>
+        <li>
+          <b>The Accept header</b> If the Accept header is enabled, Spring MVC
+          will look up its value in the incoming request to determine the
+          representation type. The ignoreAcceptHeader value must be set to false
+          to enable this approach.
+        </li>
+      </ul>
+      When developing a REST service, the @RequestMapping annotation provides
+      the consume and produce parameters to specify the type of media it accepts
+      as input or provides as output.
+    </div>
+  </div>
+
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a>
+      : <span>{{ reference.title }}</span>
+    </div>
+    <div class="title-header-container">
+      <span class="title-header">Footnotes</span>
+    </div>
+    <div>
+      <a href="http://httpd.apache.org/docs/current/en/content-negotiation.html" target="_blank"
+        ><sup>[1]</sup> </a
+      >
+      : <span>Apache HTTP Server: Content Negotiation.</span>
+    </div>
+</div>

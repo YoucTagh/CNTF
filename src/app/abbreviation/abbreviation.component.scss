@@ -1,0 +1,29 @@
+.content-text {
+  margin: 16px;
+}
+.abb-content {
+  margin-top: 16px;
+}
+.abb-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.abb-description {
+  font-size: 1rem;
+}
+
+.abb-header {
+  padding: 8px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: rgb(202, 223, 146);
+  color: rgb(110, 110, 110);
+}
+
+.abb-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}

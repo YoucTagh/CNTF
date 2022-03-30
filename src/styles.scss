@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: justify;
+}
+
+.page-title {
+  font-size: 2rem;
+  background: rgb(81, 87, 99);
+  height: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+hr {
+  height: 2px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.code-area {
+  background-color: rgb(236, 236, 236);
+  border-left: 3px solid rgb(77, 77, 77);
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  font: 1.2rem Monaco, "Courier New", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", monospace;
+}
+//.mat-drawer-inner-container::-webkit-scrollbar {
+//  display: none;
+//}
+
+// /* unvisited link */
+// a:link {
+//   color: red;
+//   text-decoration: none;
+// }
+
+// /* visited link */
+// a:visited {
+//   color: rgb(10, 248, 2);
+//   text-decoration: none;
+// }
+
+// /* mouse over link */
+// a:hover {
+//   color: rgb(113, 133, 28);
+//   text-decoration: none;
+// }
+
+// /* selected link */
+// a:active {
+//   color: blue;
+//   text-decoration: none;
+// }
+

@@ -1,0 +1,53 @@
+<p class="page-title">List Of Reference</p>
+
+<div class="filter">
+  <mat-form-field class="ref-search" appearance="fill">
+    <mat-label>Search for a reference by title or year</mat-label>
+    <input matInput type="text" [(ngModel)]="searchValue" (input)="filterReferences()">
+    <button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="searchValue='';filterReferences();">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Reference Filter</mat-label>
+    <mat-select (selectionChange)="onFilterChange($event.value)">
+      <mat-option *ngFor="let filter of filters" [value]="filter.value">
+        {{ filter.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div *ngFor="let ref of refs">
+  <mat-card class="ref-card" [id]="ref.id">
+    <mat-card-subtitle>
+      <mat-icon>date_range</mat-icon>
+      {{ ref.date }}
+    </mat-card-subtitle>
+    <mat-card-title>
+      <mat-icon>title</mat-icon>
+      <span class="ref-title">
+       [{{ref.id}}]: {{ ref.title }}
+      </span>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-icon>person_pin</mat-icon>
+      <span>{{ ref.authors }}</span>
+      <p *ngIf="ref.abstract.length != 0">
+        <mat-icon>text_format</mat-icon>
+        {{ ref.abstract }}
+      </p>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions class="card-actions">
+      <button mat-raised-button (click)="showHideAbstract(ref.title)">
+        Show/Hide Abstract
+      </button>
+      <a *ngIf="ref.url" class="ref-url" mat-mini-fab href="{{ref.url}}" target="_blank">
+        <mat-icon>link</mat-icon>
+      </a>
+      <!-- <button mat-button>Get BibTex</button> -->
+    </mat-card-actions>
+  </mat-card>
+</div>
