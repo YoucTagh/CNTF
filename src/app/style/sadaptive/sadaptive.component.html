@@ -6,14 +6,16 @@
       <span class="title-header">Description</span>
     </div>
     <span>
-      Either internally in the server or by calling another service to do the
-      task, for example to make a transformation. Adapter : Aggregation of n
-      representation of a resource for example in a building with multiple
-      sensors. Which property the adapter checks If a resource is already
-      adapted
+      The response that a server replies with to a request in an adaptive
+      content negotiation style contains a representation that has most likely
+      undergone an adaptation process. Adaptation can be performed internally by
+      the server or by using another service to perform this task, for example:
+      performing a transformation that requires a lot of processing power [63].
+      Adaptation is successful if the final delivered representation is more
+      understandable to the user based on his/her context.
     </span>
   </div>
-  <hr />
+  <!-- <hr />
   <div class="page-part">
     <div class="title-header-container">
       <span class="title-header">Example</span>
@@ -24,8 +26,8 @@
         <li></li>
       </ul>
     </span>
-  </div>
-  <hr />
+  </div> -->
+  <!-- <hr />
   <div class="page-part">
     <div class="title-header-container">
       <span class="title-header">Use cases</span>
@@ -35,7 +37,7 @@
         <li><a routerLink="/usecase"></a></li>
       </ul>
     </span>
-  </div>
+  </div> -->
   <hr />
   <div class="page-part">
     <div class="title-header-container">
@@ -52,16 +54,15 @@
         <tr>
           <td>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>The increase of preference-matching precision due to additional adaptation.</li>
             </ul>
           </td>
           <td>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>
+                The unscalable nature of the pre-adaptation process of content.
+              </li>
+              <li>The invasive nature of describing a client context.</li>
             </ul>
           </td>
         </tr>
@@ -69,28 +70,46 @@
     </table>
   </div>
   <hr />
-  <div class="page-part">
+
+  <div class="reference-container">
     <div class="title-header-container">
       <span class="title-header">References</span>
     </div>
-    <span>
-      <ul>
-        <li>
-          <a routerLink="">[1]</a> HTTP 1.1 content negotiation (by media type,
-          language).
-        </li>
-      </ul>
-    </span>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+  </div>
+
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">Links</span>
+    </div>
+    <div>
+      <div>
+        <a
+          href="https://youtu.be/o_GrfO0y1so?t=265"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Use feature templating directives for GeoServer</a
+        >
+      </div>
+      <div>
+        <a
+          href="https://github.com/opengeospatial/ogcapi-common/issues/8#issuecomment-775215521"
+          target="_blank"
+          rel="noopener noreferrer"
+        >New media types vs conneg by profile (issue).</a>
+      </div>
+    </div>
   </div>
 </div>
 
-
-<div>
-  * [] Conneg Adaptive style:
-  * Use Feature Templating Directives to: 
-      * select desired attributes
-      * filtering
-      * add prefixes
-  https://github.com/opengeospatial/ogcapi-common/issues/8#issuecomment-775215521 
+<!-- <div>
+  * [] Conneg Adaptive style: * Use Feature Templating Directives to: * select
+  desired attributes * filtering * add prefixes
+  https://github.com/opengeospatial/ogcapi-common/issues/8#issuecomment-775215521
   https://youtu.be/o_GrfO0y1so?t=265
-</div>
+</div> -->

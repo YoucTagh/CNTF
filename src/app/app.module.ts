@@ -50,9 +50,24 @@ import { FormattingComponent } from './usecase/formatting/formatting.component';
 import { SummaryComponent } from './usecase/summary/summary.component';
 import { OwlProfileComponent } from './usecase/owl-profile/owl-profile.component';
 import { EntailmentRegimeComponent } from './usecase/entailment-regime/entailment-regime.component';
-import { DConveyanceListComponent } from './dimension/d-conveyance/dconveyance-list/dconveyance-list.component';
-import { AvailableImplComponent } from './tool/available-impl/available-impl.component';
-import { AvailableServerComponent } from './tool/available-server/available-server.component';
+import { AvailableImplComponent } from './additional/available-impl/available-impl.component';
+import { AvailableServerComponent } from './additional/available-server/available-server.component';
+import { DCRSComponent } from './dimension/dcrs/dcrs.component';
+import { DAuthorizationComponent } from './dimension/dauthorization/dauthorization.component';
+import { DVocabularyComponent } from './dimension/dvocabulary/dvocabulary.component';
+import { DOwlProfileComponent } from './dimension/dowl-profile/dowl-profile.component';
+import { DEntailmentRegimeComponent } from './dimension/dentailment-regime/dentailment-regime.component';
+import { DSummaryComponent } from './dimension/dsummary/dsummary.component';
+import { DFormattingComponent } from './dimension/dformatting/dformatting.component';
+import { DAccuracyComponent } from './dimension/daccuracy/daccuracy.component';
+import { CCListComponent } from './constraint-conveyance/cc-list/cc-list.component';
+import { CCHeadersComponent } from './constraint-conveyance/cc-headers/cc-headers.component';
+import { CCURLComponent } from './constraint-conveyance/cc-url/cc-url.component';
+import { ClassificationComponent } from './classification/classification.component';
+import { OntologyComponent } from './ontology/ontology.component';
+import { ODocumentationComponent } from './ontology/o-documentation/o-documentation.component';
+import { OVisualisationComponent } from './ontology/o-visualisation/o-visualisation.component';
+import { OTurtleComponent } from './ontology/o-turtle/o-turtle.component';
 
 @NgModule({
   declarations: [
@@ -100,8 +115,23 @@ import { AvailableServerComponent } from './tool/available-server/available-serv
     SummaryComponent,
     OwlProfileComponent,
     EntailmentRegimeComponent,
-    DConveyanceListComponent,
     AvailableImplComponent,
+    DCRSComponent,
+    DAuthorizationComponent,
+    DVocabularyComponent,
+    DOwlProfileComponent,
+    DEntailmentRegimeComponent,
+    DSummaryComponent,
+    DFormattingComponent,
+    DAccuracyComponent,
+    CCListComponent,
+    CCHeadersComponent,
+    CCURLComponent,
+    ClassificationComponent,
+    OntologyComponent,
+    ODocumentationComponent,
+    OVisualisationComponent,
+    OTurtleComponent,
   ],
   imports: [
     BrowserModule,

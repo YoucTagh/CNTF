@@ -1,0 +1,93 @@
+<p class="page-title">CC Header</p>
+
+<div class="content-text">
+  <div class="usecase-part">
+    <div class="title-header-container">
+      <span class="title-header">Description</span>
+    </div>
+    <span>
+      HTTP headers are essential elements of the HTTP protocol that allow
+      additional information to be transmitted by the client (request headers)
+      and the server (response headers). This section will show how HTTP headers
+      are leveraged to convey constraints. For a more exhaustive list, please
+      see the CNTF resource website.
+    </span>
+  </div>
+  <!-- <hr />
+  <div class="usecase-part">
+    <div class="title-header-container">
+      <span class="title-header">Use cases</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a routerLink="/usecase/capability">Capability matching.</a>
+        </li>
+      </ul>
+    </span>
+  </div> -->
+  <hr />
+  <div class="usecase-part">
+    <div class="title-header-container">
+      <span class="title-header">Examples</span>
+    </div>
+
+    <div>
+      <ul>
+        <li>
+          <b>Accept:</b> a request header that indicates which media type
+          expressed in MIME types the client prefers. The server selects a
+          variant and informs the client of its choice with the Content-Type
+          response headers [47].
+        </li>
+        <li>
+          <b>Accept-Language:</b> a request header that indicates the language
+          expressed by the natural language and locale that the client prefers.
+          The server selects a variant and informs the client of its choice with
+          the Content-Language response headers [47].
+        </li>
+        <li>
+          <b>Accept-Encoding:</b> a request header that indicates the encoding
+          typically a compression algorithm that the client prefers. The server
+          selects a proposal and informs the client of its choice with the
+          Content-Encoding response headers [47].
+        </li>
+        <li>
+          <b>Accept-Crs:</b> a request header that indicates the crs that the
+          client prefers. The server selects a proposal and informs the client
+          of its choice with the Content-Crs response headers [L1].
+        </li>
+        <li>
+          <b>Accept-Presentation:</b> a request header that indicates the
+          presentation that the client prefers. The server selects a proposal
+          and informs the client of its choice with the Content-Presentation
+          response headers [44].
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr />
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+  </div>
+  <hr />
+  <div class="footnoot">
+    <div class="title-header-container">
+      <span class="title-header">Links</span>
+    </div>
+    <ul>
+      <li id="fn-d-capability-1">
+        [L1] <a href="https://github.com/opengeospatial/conneg-by-crs/blob/master/18-072-Content-Negotiation-by-CRS.md" target="_blank" rel="noopener noreferrer">Negotiating Content by Coordinate Reference System (CRS)
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

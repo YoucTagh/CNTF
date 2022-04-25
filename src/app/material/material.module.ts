@@ -9,11 +9,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
-
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
-
+import { MatTableModule } from '@angular/material/table';
 
 export const materials = [
   MatToolbarModule,
@@ -27,6 +25,7 @@ export const materials = [
   MatCardModule,
   MatInputModule,
   MatCheckboxModule,
+  MatTableModule,
 ];
 
 @NgModule({

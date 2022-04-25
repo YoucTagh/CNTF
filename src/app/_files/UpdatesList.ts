@@ -86,11 +86,20 @@ export const updates: Update[] = [
             "Enhance the content.",
         ],
     },
+    {
+        "id": 10,
+        "date": new Date('2022-03-30T00:00:00'),
+        "additions": [
+            "Add new CN Dimensions: accuracy, authorization, crs, entailment regime, formatting, owl profile, summary, vocabulary.",
+            "Add CN Styles: transparent, active, conditional, adaptive.",
+            "Add CN Conveyance style: headers based and URL based.",
+            "Update section CN tool to Addition.",
+            "Add CN Classification.",
+        ],
+    },
 ];
 
 export const futureUpdates: string[] = [
-    "Add the profile conneg dimension and the relative use case.",
-    "Add other conneg styles: conditional, active, adaptive.",
     "Develop an experimentation space to test conneg use cases.",
     "Add conneg formalization.",
 ];

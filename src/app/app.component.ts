@@ -18,73 +18,73 @@ export class AppComponent {
   useCases = [
     {
       id: '1',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/mfml',
       title: 'Multiple formats'
     },
     {
       id: '2',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/archive',
       title: 'Archiving'
     },
     {
       id: '3',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/capability',
       title: 'Capability'
     },
     {
       id: '4',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/smart-building',
       title: 'Smart building'
     },
     {
       id: '5',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/rdf-shape',
       title: 'RDF shapes'
     },
     {
       id: '6',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/vocabulary',
       title: 'Vocabulary'
     },
     {
       id: '7',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/crs',
       title: 'CRS'
     },
     {
       id: '8',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/accuracy',
       title: 'Accuracy'
     },
     {
       id: '9',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/formatting',
       title: 'Formatting'
     },
     {
       id: '10',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/summary',
       title: 'Summary'
     },
     {
       id: '11',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/entailment-regime',
       title: 'Entailment Regime'
     },
     {
       id: '12',
-      icon: 'build',
+      icon: 'description',
       link: '/usecase/owl-profile',
       title: 'OWL Profile'
     },

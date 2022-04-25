@@ -40,8 +40,23 @@ import { FormattingComponent } from './usecase/formatting/formatting.component';
 import { OwlProfileComponent } from './usecase/owl-profile/owl-profile.component';
 import { SummaryComponent } from './usecase/summary/summary.component';
 import { VocabularyComponent } from './usecase/vocabulary/vocabulary.component';
-import { AvailableServerComponent } from './tool/available-server/available-server.component';
-import { AvailableImplComponent } from './tool/available-impl/available-impl.component';
+import { AvailableServerComponent } from './additional/available-server/available-server.component';
+import { DAccuracyComponent } from './dimension/daccuracy/daccuracy.component';
+import { DAuthorizationComponent } from './dimension/dauthorization/dauthorization.component';
+import { DCRSComponent } from './dimension/dcrs/dcrs.component';
+import { DEntailmentRegimeComponent } from './dimension/dentailment-regime/dentailment-regime.component';
+import { DFormattingComponent } from './dimension/dformatting/dformatting.component';
+import { DOwlProfileComponent } from './dimension/dowl-profile/dowl-profile.component';
+import { DSummaryComponent } from './dimension/dsummary/dsummary.component';
+import { DVocabularyComponent } from './dimension/dvocabulary/dvocabulary.component';
+import { CCListComponent } from './constraint-conveyance/cc-list/cc-list.component';
+import { CCHeadersComponent } from './constraint-conveyance/cc-headers/cc-headers.component';
+import { CCURLComponent } from './constraint-conveyance/cc-url/cc-url.component';
+import { ClassificationComponent } from './classification/classification.component';
+import { OntologyComponent } from './ontology/ontology.component';
+import { OVisualisationComponent } from './ontology/o-visualisation/o-visualisation.component';
+import { ODocumentationComponent } from './ontology/o-documentation/o-documentation.component';
+import { OTurtleComponent } from './ontology/o-turtle/o-turtle.component';
 
 const routes: Routes = [
   { path: 'dimension', component: DimensionListComponent },
@@ -70,20 +85,34 @@ const routes: Routes = [
   { path: 'dimension/encoding', component: DEncodingComponent },
   { path: 'dimension/charset', component: DCharSetComponent },
   { path: 'dimension/capability', component: DCapabilityComponent },
-  { path: 'dimension/profile', component: UnderDevelopmentComponent },
+  { path: 'dimension/profile', component: DProfileComponent },
   { path: 'dimension/version', component: DVersionComponent },
+  { path: 'dimension/accuracy', component: DAccuracyComponent },
+  { path: 'dimension/authorization', component: DAuthorizationComponent },
+  { path: 'dimension/crs', component: DCRSComponent },
+  { path: 'dimension/entailment-regime', component: DEntailmentRegimeComponent },
+  { path: 'dimension/formatting', component: DFormattingComponent },
+  { path: 'dimension/owl-profile', component: DOwlProfileComponent },
+  { path: 'dimension/summary', component: DSummaryComponent },
+  { path: 'dimension/vocabulary', component: DVocabularyComponent },
   { path: 'style', component: StyleListComponent },
   { path: 'style/proactive', component: SProactiveComponent },
   { path: 'style/reactive', component: SReactiveComponent },
-  { path: 'style/transparent', component: UnderDevelopmentComponent },
-  { path: 'style/conditional', component: UnderDevelopmentComponent },
-  { path: 'style/active', component: UnderDevelopmentComponent },
-  { path: 'style/adaptive', component: UnderDevelopmentComponent },
+  { path: 'style/transparent', component: STransparentComponent },
+  { path: 'style/conditional', component: SConditionalComponent },
+  { path: 'style/active', component: SActiveComponent },
+  { path: 'style/adaptive', component: SAdaptiveComponent },
   { path: 'requirement', component: RequirementComponent },
+  { path: 'cc', component: CCListComponent },
+  { path: 'cc/header', component: CCHeadersComponent },
+  { path: 'cc/url', component: CCURLComponent },
   { path: 'maintenance', component: MaintenanceComponent },
   { path: 'update', component: UpdateComponent },
-  { path: 'tool/available-server', component: AvailableServerComponent },
-  { path: 'tool/available-impl', component: AvailableImplComponent },
+  { path: 'additional-info/available-server', component: AvailableServerComponent },
+  { path: 'classification', component: ClassificationComponent },
+  { path: 'ontology/visualisation', component: OVisualisationComponent },
+  { path: 'ontology/documentation', component: ODocumentationComponent },
+  { path: 'ontology.ttl', component:OTurtleComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

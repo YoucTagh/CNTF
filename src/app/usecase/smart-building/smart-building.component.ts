@@ -9,7 +9,7 @@ import { Reference, references } from 'src/app/_files/ReferencesList';
 export class SmartBuildingComponent implements OnInit {
 
   references: Reference[] = [];
-  refIDs: number[] = [11];
+  refIDs: number[] = [11,52];
   constructor() { }
 
   ngOnInit(): void {

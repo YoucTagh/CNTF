@@ -1,0 +1,132 @@
+<p class="page-title">Classification of available contributions</p>
+
+<div class="content-text">
+  <div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="reference">
+        <th mat-header-cell *matHeaderCellDef>Reference</th>
+        <td mat-cell *matCellDef="let element">{{ element.reference }}</td>
+      </ng-container>
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Date</th>
+        <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+      </ng-container>
+      <ng-container matColumnDef="style">
+        <th mat-header-cell *matHeaderCellDef>Style</th>
+        <td mat-cell *matCellDef="let element">{{ element.style }}</td>
+      </ng-container>
+      <ng-container matColumnDef="dimension">
+        <th mat-header-cell *matHeaderCellDef>Dimension</th>
+        <td mat-cell *matCellDef="let element">{{ element.dimension }}</td>
+      </ng-container>
+      <ng-container matColumnDef="conveyance">
+        <th mat-header-cell *matHeaderCellDef>Conveyance</th>
+        <td mat-cell *matCellDef="let element">{{ element.conveyance }}</td>
+      </ng-container>
+      <ng-container matColumnDef="protocol">
+        <th mat-header-cell *matHeaderCellDef>Protocol</th>
+        <td mat-cell *matCellDef="let element">{{ element.protocol }}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <pre>
+      Table 1 - Contributions using CN and their characteristics (Blank: not known).
+    </pre>
+  </div>
+  <div class="page-part">
+    <div>
+      The table 1 presents our effort to gather some known contributions in the
+      literature pushing the state of the art in different directions but having
+      in common their use of CN, each contribution is presented with a reference
+      and its publication date as well as its respective characteristics
+      according to our previously presented categorisation.
+    </div>
+  </div>
+
+  <div>
+    <p>
+      Composite Capabilities/Preferences Profile (CC/PP) and WAP UAProf are
+      descriptions of device capabilities and user preferences. [66] describes
+      an implementation of HTTP content negotiation that uses them to provide
+      the best variant. We believe that the proactive style of CN is used and,
+      according to our characteristics, the dimension is <em>capacity</em>, the
+      headers are used to convey constraints, and the protocol is HTTP.
+    </p>
+    <p>
+      The paper [16] presents a decision engine capable of determining optimal
+      adaptation decisions from interpolating situational contextual
+      information, e.g., device capacity. HTTP was used by embedding the userid
+      in the URL to identify the end user.
+    </p>
+    <p>
+      Istex is a French scientific archive [67]. The clients have the
+      possibility to have the representation in several formats and for that, as
+      mentioned on the site, an ARK is used. If we request the resource without
+      specifying the media type, we receive a json file describing the existing
+      variants and therefore we can consider it a reactive negotiation. The
+      dimension is the media type and the transmission in ARK using the HTTP
+      protocol.
+    </p>
+    <p>
+      Web archives play a major role in providing a picture reflecting the state
+      of the Web at a given time. The contribution [52] involves the client
+      request in the Memento aggregation process beyond the specification of a
+      URI-R and a date as described in [38] using the header <em>prefer</em>.
+      Therefore the characteristics are: Version for dimension, headers for
+      constraint transport, and HTTP as the protocol and because the aggregator
+      returns a set of records and the client can potentially manipulate the
+      response to issue another request, we judge this part to have a reactive
+      CN style.
+    </p>
+    <p>
+      One scenario described in the contribution [44] is of a client that requests
+      a resource representation from a server and wants the response to be
+      encoded according to a specific RDF presentation, which is done by
+      including metadata in the request header. And because this contribution is
+      primarily intended for constrained devices, the proactive + adaptive style
+      is preferable. It is important to mention that the content negotiation
+      styles are not mutually exclusive. The author points out that, although
+      this method has been implemented in HTTP, it could easily be defined as
+      equivalent CoAP options.
+    </p>
+    <p>
+      Using the MarkLogic [67] server, a REST application developer uses the
+      conditional CN style. A client would receive a response with a body
+      containing several parts separated by a delimiter to be selected. This
+      method is primarily used to select the media type dimension and uses HTTP
+      and headers to convey this constraint. In addition, the Open Connectivity
+      Foundation (OCF) specification also includes the means to negotiate the
+      media type using the CoAP protocol [56].
+    </p>
+  </div>
+
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+    <!-- <div class="title-header-container">
+      <span class="title-header">Footnotes</span>
+    </div>
+    <div>
+      <a href="https://github.com/thesmartenergy/rdfp" target="_blank"
+        ><sup>[1]</sup>
+      </a>
+      : <span>RDF Presentation and RDF Presentation Negotiation.</span>
+    </div>
+
+    <div>
+      <a href="https://www.w3.org/TR/NOTE-CCPPexchange#6" target="_blank"
+        ><sup>[2]</sup>
+      </a>
+      : <span>Examples of CC/PP exchange protocol.</span>
+    </div>
+  </div> -->
+  </div>
+</div>

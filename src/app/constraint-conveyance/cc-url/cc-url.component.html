@@ -1,0 +1,120 @@
+<p class="page-title">CC URL</p>
+
+<div class="content-text">
+  <div class="usecase-part">
+    <div class="title-header-container">
+      <span class="title-header">Description</span>
+    </div>
+    <span>
+      URIs not only provide a simple and extensible way to identify resources on
+      the Web, they could be used to convey constraints to guide the selection
+      of a preferred variant. In this section, we present three ways to utilize
+      them.
+    </span>
+  </div>
+  <!-- <hr />
+  <div class="usecase-part">
+    <div class="title-header-container">
+      <span class="title-header">Use cases</span>
+    </div>
+    <span>
+      <ul>
+        <li>
+          <a routerLink="/usecase/capability">Capability matching.</a>
+        </li>
+      </ul>
+    </span>
+  </div> -->
+  <hr />
+  <div class="usecase-part">
+    <div class="title-header-container">
+      <span class="title-header">Examples</span>
+    </div>
+
+    <div>
+      <ul>
+        <li>
+          <p>
+            <b>Archival Resource Key (ARK):</b> ARK is an identification scheme
+            for a persistent identifier for information objects. Using the
+            optional "Qualifier" part, a kind of service entry point could be
+            created that allows an ARK to support access to variants (versions,
+            languages, formats) of components by using the '.' (period)
+            character after the Name part of an ARK. For example, the URI
+            <a
+              href="https://api.istex.fr/ark:/67375/6GQ-MLC8GRWC-5"
+              target="_blank"
+              rel="noopener noreferrer"
+              >https://api.istex.fr/ark:/67375/6GQ-MLC8GRWC-5</a
+            >
+            list all the variants and the PDF variant is at the URI
+            <a
+              href="https://api.istex.fr/ark:/67375/6GQ-MLC8GRWC-5/fulltext.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >https://api.istex.fr/ark:/67375/6GQ-MLC8GRWC-5/fulltext.pdf</a
+            >.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>URL path extension (suffix pattern matching):</b> this approach
+            is similar to the ark approach, which is to use the URI with an
+            extension primarily to request the media type of API endpoints. The
+            URI
+            <a
+              href="http://myapi.example.com/account/123.json"
+              target="_blank"
+              rel="noopener noreferrer"
+              >http://myapi.example.com/account/123.json</a
+            >
+            would provide the 123 account in a json format.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Query String Arguments (QSA):</b> A query string is a part of a
+            URL which assigns values to specified parameters. QSAs are commonly
+            used to deliver extra information to a server. One of which is
+            preferences to select an appropriate variant
+            <a
+              href="http://linked.data.gov.au/dataset/gnaf/address/GAACT714845933?_view=ISO19160&_format=text/turtle"
+              target="_blank"
+              rel="noopener noreferrer"
+              >http://linked.data.gov.au/dataset/gnaf/address/GAACT714845933?_view=ISO19160&_format=text/turtle</a
+            >.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- <hr />
+  <div class="reference-container">
+    <div class="title-header-container">
+      <span class="title-header">References</span>
+    </div>
+    <div *ngFor="let reference of references">
+      <a routerLink="/reference" fragment="{{ reference.id }}" target="_blank"
+        >[{{ reference.id }}]</a
+      >
+      : <span>{{ reference.title }}</span>
+    </div>
+  </div> -->
+  <!-- <hr />
+  <div class="footnoot">
+    <div class="title-header-container">
+      <span class="title-header">Links</span>
+    </div>
+    <ul>
+      <li id="fn-d-capability-1">
+        [L1]
+        <a
+          href="https://github.com/opengeospatial/conneg-by-crs/blob/master/18-072-Content-Negotiation-by-CRS.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Negotiating Content by Coordinate Reference System (CRS)
+        </a>
+      </li>
+    </ul>
+  </div> -->
+</div>

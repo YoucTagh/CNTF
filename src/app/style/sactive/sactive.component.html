@@ -1,25 +1,29 @@
 <p class="page-title">Active Content Negotiation</p>
 
 <div class="content-text">
-  <div class="page-part">
+  <div class="usecase-part">
     <div class="title-header-container">
       <span class="title-header">Description</span>
     </div>
-    <span> </span>
-  </div>
-  <hr />
-  <div class="page-part">
-    <div class="title-header-container">
-      <span class="title-header">Example</span>
-    </div>
-    <span>
-      <ul>
-        <li></li>
-        <li></li>
-      </ul>
-    </span>
-  </div>
-  <hr />
+    <div>
+      The response that a server replies with to a request in an active content
+      negotiation style contains a script that makes additional (more specific)
+      requests based on the user agent's characteristics [47].
+
+      <div class="code-area">
+        <pre>
+    Example: 
+    If you have an HTML page that includes javascript that asks
+      IF (browser supports MyAwesomeLanguage 1.1) 
+                THEN (load URL for myAwesomeLanguage 1.1 content)
+      ELSE IF (browser supports MyAwesomeLanguage 1.0)
+                THEN (load URL for myAwesomeLanguage 1.0 content)
+      ELSE 
+          (insert content for 'can't display model')
+    </pre
+        >
+      </div>
+      <!-- <hr />
   <div class="page-part">
     <div class="title-header-container">
       <span class="title-header">Use cases</span>
@@ -29,51 +33,90 @@
         <li><a routerLink="/usecase"></a></li>
       </ul>
     </span>
-  </div>
-  <hr />
-  <div class="page-part">
-    <div class="title-header-container">
-      <span class="title-header">Advantages and Disadvantages</span>
+  </div> -->
+      <hr />
+      <div class="page-part">
+        <div class="title-header-container">
+          <span class="title-header">Advantages and Disadvantages</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Advantages</th>
+              <th>Disadvantages</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <ul>
+                  <li>
+                    The reduction of user interaction by automating the sending
+                    of additional requests.
+                  </li>
+                  <li>
+                    The provision of a personalised representation that matches
+                    the capabilities of the user agent.
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    The need for multiple requests to build the final
+                    representation.
+                  </li>
+                  <li>
+                    The introduction of potential threats due to script
+                    execution, e.g. a man-in-the-middle attacker can intercept
+                    or rewrite the response to include malicious JavaScript
+                    code. Malicious active content can steal the user's
+                    credentials, acquire sensitive data about the user, or
+                    attempt to install malware on the user's system (by
+                    leveraging vulnerabilities in the browser or its plugins,
+                    for example).
+                  </li>
+                  <li>
+                    The prohibition of active content by default in the most
+                    recent versions of browsers due to the vulnerabilities
+                    mentioned above.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr />
+
+      <div class="reference-container">
+        <div class="title-header-container">
+          <span class="title-header">References</span>
+        </div>
+        <div *ngFor="let reference of references">
+          <a
+            routerLink="/reference"
+            fragment="{{ reference.id }}"
+            target="_blank"
+            >[{{ reference.id }}]</a
+          >
+          : <span>{{ reference.title }}</span>
+        </div>
+      </div>
+
+      <div class="reference-container">
+        <div class="title-header-container">
+          <span class="title-header">Links</span>
+        </div>
+        <div>
+          <div>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content#mixed_passivedisplay_content"
+              >Mixed_content</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Advantages</th>
-          <th>Disadvantages</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <hr />
-  <div class="page-part">
-    <div class="title-header-container">
-      <span class="title-header">References</span>
-    </div>
-    <span>
-      <ul>
-        <li>
-          <a routerLink="">[1]</a> HTTP 1.1 content negotiation (by media type,
-          language).
-        </li>
-      </ul>
-    </span>
   </div>
 </div>

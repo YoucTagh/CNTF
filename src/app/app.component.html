@@ -29,7 +29,7 @@
     <mat-expansion-panel class="expansion-panel">
       <mat-expansion-panel-header class="nav-head">
         <mat-panel-title>
-          <mat-icon>build</mat-icon>
+          <mat-icon>description</mat-icon>
           <span>CN Use Case</span>
         </mat-panel-title>
       </mat-expansion-panel-header>
@@ -94,6 +94,58 @@
           <mat-icon>extension</mat-icon>
           <span>Version</span>
         </button>
+        <button mat-button class="menu-button" routerLink="/dimension/accuracy">
+          <mat-icon>extension</mat-icon>
+          <span>Accuracy</span>
+        </button>
+        <button
+          mat-button
+          class="menu-button"
+          routerLink="/dimension/authorization"
+        >
+          <mat-icon>extension</mat-icon>
+          <span>Authorization</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/dimension/crs">
+          <mat-icon>extension</mat-icon>
+          <span>CRS</span>
+        </button>
+        <button
+          mat-button
+          class="menu-button"
+          routerLink="/dimension/entailment-regime"
+        >
+          <mat-icon>extension</mat-icon>
+          <span>Entailment Regime</span>
+        </button>
+        <button
+          mat-button
+          class="menu-button"
+          routerLink="/dimension/formatting"
+        >
+          <mat-icon>extension</mat-icon>
+          <span>Formatting</span>
+        </button>
+        <button
+          mat-button
+          class="menu-button"
+          routerLink="/dimension/owl-profile"
+        >
+          <mat-icon>extension</mat-icon>
+          <span>OWL Profile</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/dimension/summary">
+          <mat-icon>extension</mat-icon>
+          <span>Summary</span>
+        </button>
+        <button
+          mat-button
+          class="menu-button"
+          routerLink="/dimension/vocabulary"
+        >
+          <mat-icon>extension</mat-icon>
+          <span>Vocabulary</span>
+        </button>
       </div>
     </mat-expansion-panel>
 
@@ -135,23 +187,85 @@
         </button>
       </div>
     </mat-expansion-panel>
+
+    <mat-expansion-panel class="expansion-panel">
+      <mat-expansion-panel-header class="nav-head">
+        <mat-panel-title>
+          <mat-icon>send</mat-icon>
+          <span>CN C Conveyance</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <button mat-button class="menu-button" routerLink="/cc">
+        <mat-icon>list</mat-icon>
+        <span>CC List</span>
+      </button>
+      <div class="nav-section">
+        <button mat-button class="menu-button" routerLink="/cc/header">
+          <mat-icon>send</mat-icon>
+          <span>Header Base</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/cc/url">
+          <mat-icon>send</mat-icon>
+          <span>URI Base</span>
+        </button>
+      </div>
+    </mat-expansion-panel>
+
     <button mat-button class="menu-button" routerLink="/requirement">
       <mat-icon>stars</mat-icon>
       <span>CN Requirement</span>
     </button>
 
+    <button
+      mat-button
+      class="menu-button"
+      routerLink="/classification"
+    >
+      <mat-icon>table_chart</mat-icon>
+      <span>CN Classification</span>
+    </button>
+
+    <mat-expansion-panel class="expansion-panel">
+      <mat-expansion-panel-header class="nav-head">
+        <mat-panel-title>
+          <mat-icon>linear_scale</mat-icon>
+          <span>Ontology</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <button
+        mat-button
+        class="menu-button"
+        routerLink="/ontology/visualisation"
+      >
+        <mat-icon>linear_scale</mat-icon>
+        <span>Visualisation</span>
+      </button>
+
+      <button
+        mat-button
+        class="menu-button"
+        routerLink="/ontology/documentation"
+      >
+        <mat-icon>linear_scale</mat-icon>
+        <span>Documentation</span>
+      </button>
+    </mat-expansion-panel>
+    <mat-divider></mat-divider>
+
     <mat-expansion-panel class="expansion-panel">
       <mat-expansion-panel-header class="nav-head">
         <mat-panel-title>
           <mat-icon>link</mat-icon>
-          <span>CN Tool</span>
+          <span>Additional Infos</span>
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <button mat-button class="menu-button" routerLink="/tool/available-impl">
-        <mat-icon>link</mat-icon>
-        <span>Available Impl</span>
-      </button>
-      <button mat-button class="menu-button" routerLink="/tool/available-server">
+
+      <button
+        mat-button
+        class="menu-button"
+        routerLink="/additional-info/available-server"
+      >
         <mat-icon>link</mat-icon>
         <span>Server Impl</span>
       </button>
@@ -195,7 +309,7 @@
       <router-outlet></router-outlet>
     </div>
     <div class="footer mat-elevation-z8">
-      You have found a problem or you have a contribution, please refer to 
+      You have found a problem or you have a contribution, please refer to
       <a routerLink="/contribute" target="_blank">this page</a>.
     </div>
   </mat-sidenav-content>

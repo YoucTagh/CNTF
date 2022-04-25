@@ -9,7 +9,7 @@ import { Reference, references } from 'src/app/_files/ReferencesList';
 export class ArchiveComponent implements OnInit {
 
   references: Reference[] = [];
-  refIDs: number[] = [38,58];
+  refIDs: number[] = [38,52];
   constructor() { }
 
   ngOnInit(): void {

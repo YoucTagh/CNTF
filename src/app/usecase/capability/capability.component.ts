@@ -9,7 +9,7 @@ import { Reference, references } from 'src/app/_files/ReferencesList';
 export class CapabilityComponent implements OnInit {
 
   references: Reference[] = [];
-  refIDs: number[] = [1,17,27,32,33,34,35,36,52,28];
+  refIDs: number[] = [1,17,27,32,33,34,35,36,28];
   constructor() { }
 
   ngOnInit(): void {

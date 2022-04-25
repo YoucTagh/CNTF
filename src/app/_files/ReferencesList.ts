@@ -956,6 +956,7 @@ const importedReferences = [
 				"given": "Lars G"
 			}
 		],
+		"URL": "https://www.w3.org/2016/11/sdsvoc/SDSVoc16_paper_14",
 		"issued": {
 			"date_parts": [
 				[
@@ -1293,7 +1294,7 @@ const importedReferences = [
 		"publisher": "Springer",
 		"source": "DBLP Computer Science Bibliography",
 		"title": "CC/PP for Content Negotiation and Contextualization",
-		"URL": "https://doi.org/10.1007/3-540-44498-X\\_20",
+		"URL": "https://link.springer.com/content/pdf/10.1007/3-540-44498-X_20.pdf",
 		"volume": "1987",
 		"author": [
 			{
@@ -1515,7 +1516,7 @@ const importedReferences = [
 		"abstract": "Semantic Scholar extracted view of &quot;Client-Assisted Memento Aggregation Using the Prefer Header&quot; by Mat Kelly et al.",
 		"language": "en",
 		"title": "Client-Assisted Memento Aggregation Using the Prefer Header",
-		"URL": "https://www.semanticscholar.org/paper/Client-Assisted-Memento-Aggregation-Using-the-Kelly-Alam/ccd611f88f49eba8c2ca02b6a687a6d3a212db52",
+		"URL": "https://matkelly.com/papers/2018_wadl_preferData.pdf",
 		"author": [
 			{
 				"family": "Kelly",
@@ -1865,7 +1866,7 @@ const importedReferences = [
 		"publisher-place": "New York, NY, USA",
 		"source": "ACM Digital Library",
 		"title": "RDF presentation and correct content conveyance for legacy services and the web of things",
-		"URL": "https://doi.org/10.1145/3277593.3277618",
+		"URL": "https://www.maxime-lefrancois.info/docs/Lefrancois-SISIoT2018-RDFP.pdf",
 		"author": [
 			{
 				"family": "Lefrançois",
@@ -2464,7 +2465,258 @@ const importedReferences = [
 			]
 		},
 		"citation-key": "vsenkyvr2019shacl"
+	},
+	{
+		"id": 62,
+		"type": "article-journal",
+		"container-title": "Future Internet",
+		"DOI": "10.3390/fi4030788",
+		"issue": "3",
+		"abstract": `This paper describes the results of a collaborative effort that has reconciled the Open Annotation 
+		Collaboration (OAC) ontology and the Annotation Ontology (AO) to produce a merged data model 
+		[the Open Annotation (OA) data model] to describe Web-based annotations—and hence facilitate the discovery,
+		 sharing and re-use of such annotations. Using a number of case studies that include digital scholarly editing,
+		  3D museum artifacts and sensor data streams, we evaluate the OA model’s capabilities. We also describe our
+		   implementation of an online annotation server that supports the storage, search and retrieval of OA-compliant
+		    annotations across multiple applications and disciplines. Finally we discuss outstanding problem issues
+			 associated with the OA ontology, and the impact that certain design decisions have had on the efficient 
+			 storage, indexing, search and retrieval of complex structured annotations.`,
+		"page": "788–806",
+		"title": "Towards annotopia - enabling the semantic interoperability of web-based annotations",
+		"URL": "https://doi.org/10.3390/fi4030788",
+		"volume": "4",
+		"author": [
+			{
+				"family": "Hunter",
+				"given": "Jane"
+			},
+			{
+				"family": "Gerber",
+				"given": "Anna"
+			}
+		],
+		"issued": {
+			"date_parts": [
+				[
+					"2012"
+				]
+			]
+		},
+		"citation-key": "hunter:2012"
+	},
+	{
+		"id": 63,
+		"type": "paper-conference",
+		"container-title": "W3C workshop on delivery context",
+		"page": "4–5",
+		"title": "Universal profiling for content negotiation and adaptation in heterogeneous environments",
+		"author": [
+			{
+				"family": "Lemlouma",
+				"given": "Tayeb"
+			},
+			{
+				"family": "Layaïda",
+				"given": "Nabil"
+			}
+		],
+		"issued": {
+			"date_parts": [
+				[
+					"2002"
+				]
+			]
+		},
+		"URL": 'http://opera.inrialpes.fr/people/Tayeb.Lemlouma/Papers/W3C/UniversalProfilingForContentNegotiation/UniversalPriofiling.pdf',
+		"abstract": `This position paper focuses on the content negotiation and adaptation of services in heterogeneous
+		environment and this using the concept of universal profiling. We discuss our vision to achieve an
+		advanced content negotiation. For this, we define a profiling schema that includes the utile
+		description of the entire component that can participate in the final deliverance of services. The
+		defined profiling schema is opened, extensible and doesn't depend to a particular kind of devices,
+		which make it useful in the context of adapted services deliverance. `,
+		"citation-key": "lemlouma:2002"
+	},
+	{
+		"id": 64,
+		"type": "report",
+		"page": "1–25",
+		"title": "Hypertext transfer protocol (HTTP/1.1): Range requests",
+		"URL": "https://doi.org/10.17487/RFC7233",
+		"volume": "7233",
+		"author": [
+			{
+				"family": "Fielding",
+				"given": "Roy T."
+			},
+			{
+				"family": "Lafon",
+				"given": "Yves"
+			},
+			{
+				"family": "Reschke",
+				"given": "Julian F."
+			}
+		],
+		"issued": {
+			"date_parts": [
+				[
+					"2014"
+				]
+			]
+		},
+		"abstract": `The Hypertext Transfer Protocol (HTTP) is a stateless application-
+		level protocol for distributed, collaborative, hypertext information
+		systems.  This document defines range requests and the rules for
+		constructing and combining responses to those requests.`,
+		"citation-key": "rfc-range:2014"
+	},
+	{
+		"id": 65,
+		"type": "article-journal",
+		"page": "381–443",
+		"title": "Personalised information retrieval: survey and classification",
+		"URL": "https://doi.org/10.1007/s11257-012-9124-1",
+		"volume": "23",
+		"author": [
+			{
+				"family": "Ghorab",
+				"given": "M. Rami"
+			},
+			{
+				"family": "Zhou",
+				"given": "Dong"
+			},
+			{
+				"family": "O'Connor",
+				"given": "Alexander"
+			},
+			{
+				"family": "Wade",
+				"given": "Vincent"
+			}
+		],
+		"issued": {
+			"date_parts": [
+				[
+					"2013"
+				]
+			]
+		},
+		"abstract": `Information Retrieval (IR) systems assist users in finding information from the myriad of information resources
+		 available on the Web. A traditional characteristic of IR systems is that if different users submit the same query,
+		  the system would yield the same list of results, regardless of the user. Personalised Information Retrieval (PIR)
+		   systems take a step further to better satisfy the user’s specific information needs by providing search results
+		    that are not only of relevance to the query but are also of particular relevance to the user who submitted the
+			 query. PIR has thereby attracted increasing research and commercial attention as information portals aim at
+			  achieving user loyalty by improving their performance in terms of effectiveness and user satisfaction.
+			   In order to provide a personalised service, a PIR system maintains information about the users and the history
+			    of their interactions with the system. This information is then used to adapt the users’ queries or the
+				 results so that information that is more relevant to the users is retrieved and presented.
+				  This survey paper features a critical review of PIR systems, with a focus on personalised search.
+				   The survey provides an insight into the stages involved in building and evaluating PIR systems, namely:
+				    information gathering, information representation, personalisation execution, and system evaluation.
+					 Moreover, the survey provides an analysis of PIR systems with respect to the scope of personalisation
+					  addressed. The survey proposes a classification of PIR systems into three scopes: individualised systems,
+					   community-based systems, and aggregate-level systems. Based on the conducted survey,
+					    the paper concludes by highlighting challenges and future research directions in the field of PIR.`,
+		"citation-key": "ghorab:2013"
+	},
+	{
+		"id": 66,
+		"type": "article-journal",
+		"issue": "190",
+		"title": "Implementing content negotiation using CC/PP and WAP UAProf",
+		"author": [
+			{
+				"family": "Butler",
+				"given": "Mark H"
+			}
+		],
+		"issued": {
+			"date_parts": [
+				[
+					"2001"
+				]
+			]
+		},
+		"abstract": `Content negotiation is a technique relevant to device
+		independence that allows servers to provide clients with
+		the most appropriate resource from a number of
+		alternates. Several standards have been proposed for
+		content negotiation including HTTP/1.1 server based
+		content negotiation, media feature sets and most recently
+		the Composite Capabilities / Preferences Profile (CC/PP).
+		CC/PP, unlike the other two methods, is only concerned
+		with the client profile and does not specify mechanisms for
+		describing alternate versions of content or matching client
+		profiles to content descriptions. In order to better
+		understand how CC/PP may be used this report describes
+		an implementation of HTTP/1.1-style content negotiation
+		that uses CC/PP client profiles and RDF content
+		descriptions. The Jena RDF Framework developed at HP
+		Labs is used to implement a negotiation algorithm similar
+		to that used by Apache Web Server. As CC/PP is
+		compatible with the forthcoming Wireless Access Protocol
+		(WAP) User Agent Profile (UAProf) these techniques are
+		applicable to the next generation of WAP devices. This is
+		demonstrated using an example profile taken from the
+		current WAP Forum documentation.`,
+		"URL": "http://shiftleft.com/mirrors/www.hpl.hp.com/techreports/2001/HPL-2001-190.pdf",
+		"citation-key": "butler2001implementing"
+	}, {
+		"id": 67,
+		"type": "article-journal",
+		"container-title": "Arabesques",
+		"issue": "88",
+		"page": "18–19",
+		"title": "ISTEX: une nouvelle corde à son ARK",
+		"author": [
+			{
+				"family": "Viot",
+				"given": "Pascale"
+			},
+			{
+				"family": "Thouvenin",
+				"given": "Nicolas"
+			}
+		],
+		"issued": {
+			"date_parts": [
+				[
+					"2018"
+				]
+			]
+		},
+		"abstract": `Les documents issus des bouquets acquis dans le cadre des négociations ISTEX et disponibles sur la plateforme 
+		possèdent un identifiant technique interne de 40 caractères, l’ID ISTEX. Ils ont été enrichis depuis peu par un nouvel 
+		identifiant normé, pérenne, gratuit et distribué : l’ARK.`,
+		"URL": "https://publications-prairial.fr/arabesques/index.php?id=1222",
+		"citation-key": "viot:2018"
+	},
+	{
+		"id": 68,
+		"type": "report",
+		"language": "english",
+		"publisher": "MarkLogic",
+		"title": "MarkLogic REST application developer's guide",
+		"author": [
+			{
+				"family": "",
+				"given": "MarkLogic"
+			}
+		],
+		"URL": "https://docs.marklogic.com/guide/rest-dev",
+		"issued": {
+			"date_parts": [
+				[
+					"2018",
+					12
+				]
+			]
+		},
+		"citation-key": "markLogic:2018"
 	}
+
 ]
 
 export const references: Reference[] = importedReferences.map(ref => {
