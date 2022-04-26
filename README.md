@@ -24,3 +24,52 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+
+## Citation
+To cite this resource, please use the following BibTex:
+
+```
+@website{cntf:2022,
+  author = {{Taghzouti, Yousouf and Zimmermann, Antoine and Lefrançois, Maxime }},
+  title = {A portal for the state of the art of content negotiation},
+  date = {2022},
+  url = {https://w3id.org/cntf/}
+}
+```
+
+Or the following RDF:
+
+```
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sdo: <https://schema.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<https://w3id.org/cntf/>
+    a sdo:WebSite , owl:NamedIndividual ;
+    sdo:codeRepository <https://github.com/youctagh/cntf/> ;
+    dcterms:type wiki:Q35127 ; # "website"
+    dcterms:creator "Yousouf Taghzouti","Antoine Zimmermann","Maxime Lefrançois" ;
+    dcterms:date "2022"^^xsd:gYear ;
+    dcterms:title "A portal for the state of the art of content negotiation".
+```
+
+
+## Contacts
+
+*creators:*  
+
+**Yousouf Taghzouti**  
+*PhD at EMSE*  
+<yousouf.taghzouti@emse.fr>  
+<https://orcid.org/0000-0003-4509-9537>
+
+**Antoine Zimmermann**  
+*Professor at EMSE*  
+<antoine.zimmermann@emse.fr>  
+<https://orcid.org/0000-0003-1502-6986>
+
+**Maxime Lefrançois**  
+*Professor at EMSE*  
+<maxime.lefrancois@emse.fr>  
+<https://orcid.org/0000-0001-9814-8991>
