@@ -10,7 +10,7 @@ export class OTurtleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    window.location.href = 'assets/ontology/cntf.ttl';
+    window.location.href = 'ontology.ttl';
   }
 
 }

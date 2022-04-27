@@ -7,7 +7,7 @@
     <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
     <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
   </button>
-  Content Negotiation Theoretical Framework
+  <button mat-button routerLink="/home">CNTF</button>
 </mat-toolbar>
 
 <mat-sidenav-container>
@@ -18,7 +18,10 @@
     />
 
     <h4 class="name">CNTF</h4>
-    <p class="designation">Yousouf TAGHZOUTI</p>
+
+    <a class="designation" href="https://github.com/youctagh"
+      >Yousouf TAGHZOUTI</a
+    >
 
     <mat-divider></mat-divider>
 
@@ -216,11 +219,7 @@
       <span>CN Requirement</span>
     </button>
 
-    <button
-      mat-button
-      class="menu-button"
-      routerLink="/classification"
-    >
+    <button mat-button class="menu-button" routerLink="/classification">
       <mat-icon>table_chart</mat-icon>
       <span>CN Classification</span>
     </button>
@@ -236,20 +235,12 @@
       <button
         mat-button
         class="menu-button"
-        routerLink="/ontology/visualisation"
+        routerLink="/visualisation"
       >
         <mat-icon>linear_scale</mat-icon>
         <span>Visualisation</span>
       </button>
 
-      <button
-        mat-button
-        class="menu-button"
-        routerLink="/ontology/documentation"
-      >
-        <mat-icon>linear_scale</mat-icon>
-        <span>Documentation</span>
-      </button>
     </mat-expansion-panel>
     <mat-divider></mat-divider>
 

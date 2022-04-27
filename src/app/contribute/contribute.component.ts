@@ -16,9 +16,9 @@ export class ContributeComponent implements OnInit {
 
   createIssue() {
     var issueTitle = "";
-    var issueDescription = "At [URI](" + location.href + "):";
-    this.uri = "https://gitlab.emse.fr/yousouf.taghzouti/conneg-tf/-/issues/new"
-      + "?issue[title]=" + encodeURIComponent(issueTitle) + "&issue[description]=" + encodeURIComponent(issueDescription);
+    var issueDescription = "At URI the https://ci.mines-stetienne.fr/cntf/... :";
+    this.uri = "https://github.com/YoucTagh/CNTF/issues/new";
+      //+ "?issue[title]=" + encodeURIComponent(issueTitle) + "&issue[description]=" + encodeURIComponent(issueDescription);
     return this.uri
   }
 }

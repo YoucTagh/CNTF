@@ -1,17 +1,17 @@
-@prefix : <https://ci.mines-stetienne.fr/cntf/ontology#> .
+@prefix : <https://w3id.org/cntf/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cntf: <https://ci.mines-stetienne.fr/cntf/> .
+@prefix cntf: <https://w3id.org/cntf/> .
 @prefix obda: <https://w3id.org/obda/vocabulary#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://ci.mines-stetienne.fr/cntf/ontology#> .
+@base <https://w3id.org/cntf/ontology#> .
 
-<https://ci.mines-stetienne.fr/cntf/ontology#> rdf:type owl:Ontology ;
-                                                rdfs:label "The CNTF ontology"@en ;
-                                                owl:versionIRI "https://ci.mines-stetienne.fr/cntf/ontology-0.0.1"@en ;
-                                                owl:versionInfo "0.0.1"@en .
+<https://w3id.org/cntf/ontology> rdf:type owl:Ontology ;
+                                   owl:versionIRI cntf:ontology-0.0.1 ;
+                                   rdfs:label "The CNTF ontology"@en ;
+                                   owl:versionInfo "0.0.1" .
 
 #################################################################
 #    Annotation properties
@@ -25,25 +25,33 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasAuthor
+###  https://w3id.org/cntf/ontology#hasAdvantage
+:hasAdvantage rdf:type owl:ObjectProperty ;
+              rdfs:domain :Style ;
+              rdfs:range :StyleAdventage .
+
+
+###  https://w3id.org/cntf/ontology#hasAuthor
 :hasAuthor rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:domain :Reference ;
            rdfs:range :Person .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasCCMean
+###  https://w3id.org/cntf/ontology#hasCCMean
 :hasCCMean rdf:type owl:ObjectProperty ;
            rdfs:domain :ConstraintConveyanceMeanExample ;
            rdfs:range :ConstraintConveyanceMean .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasClassification
+###  https://w3id.org/cntf/ontology#hasClassification
 :hasClassification rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf owl:topObjectProperty .
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain :ClassificationItem ;
+                   rdfs:range :Classification .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasDimension
+###  https://w3id.org/cntf/ontology#hasDimension
 :hasDimension rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain :UseCase ;
@@ -51,19 +59,27 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
               rdfs:comment "Links a content negotiation use case to a dimension of content negotiation"@en .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasProtocol
+###  https://w3id.org/cntf/ontology#hasDisadvantage
+:hasDisadvantage rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Style ;
+                 rdfs:range :StyleDisadvantage .
+
+
+###  https://w3id.org/cntf/ontology#hasProtocol
 :hasProtocol rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty .
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :ClassificationItem ;
+             rdfs:range :Protocol .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasReference
+###  https://w3id.org/cntf/ontology#hasReference
 :hasReference rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:range :Reference ;
               rdfs:comment "links something to one of its references."@en .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasRequirement
+###  https://w3id.org/cntf/ontology#hasRequirement
 :hasRequirement rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:domain :UseCase ;
@@ -71,40 +87,44 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                 rdfs:comment "Links a content negotiation use case to one of its requirements."@en .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasSolution
+###  https://w3id.org/cntf/ontology#hasSolution
 :hasSolution rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty .
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :UseCase ;
+             rdfs:range :UseCaseSolution .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasStyle
+###  https://w3id.org/cntf/ontology#hasStyle
 :hasStyle rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf owl:topObjectProperty .
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :ClassificationItem ;
+          rdfs:range :Style .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasTerm
+###  https://w3id.org/cntf/ontology#hasTerm
 :hasTerm rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasTermDescription
+###  https://w3id.org/cntf/ontology#hasTermDescription
 :hasTermDescription rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
                     rdfs:domain :Term ;
                     rdfs:range :TermDescription .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasTermResemblance
+###  https://w3id.org/cntf/ontology#hasTermResemblance
 :hasTermResemblance rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasUpdateAddition
+###  https://w3id.org/cntf/ontology#hasUpdateAddition
 :hasUpdateAddition rdf:type owl:ObjectProperty ;
                    rdfs:domain :Update ;
                    rdfs:range :UpdateAddition .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasUseCase
+###  https://w3id.org/cntf/ontology#hasUseCase
 :hasUseCase rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty .
 
@@ -113,82 +133,70 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasAbstract
+###  https://w3id.org/cntf/ontology#hasAbstract
 :hasAbstract rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:range rdfs:Literal .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasAdditionDate
+###  https://w3id.org/cntf/ontology#hasAdditionDate
 :hasAdditionDate rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:dateTime .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasAdvantage
-:hasAdvantage rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:range rdfs:Literal .
-
-
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasDescription
+###  https://w3id.org/cntf/ontology#hasDescription
 :hasDescription rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
                 rdfs:range rdfs:Literal .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasDisadvantage
-:hasDisadvantage rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf owl:topDataProperty ;
-                 rdfs:range rdfs:Literal .
-
-
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasExample
+###  https://w3id.org/cntf/ontology#hasExample
 :hasExample rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
             rdfs:range rdfs:Literal .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasFamilyName
+###  https://w3id.org/cntf/ontology#hasFamilyName
 :hasFamilyName rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :hasName .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasGivenName
+###  https://w3id.org/cntf/ontology#hasGivenName
 :hasGivenName rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :hasName .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasID
+###  https://w3id.org/cntf/ontology#hasID
 :hasID rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf owl:topDataProperty ;
        rdfs:range xsd:long .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasIssuedDate
+###  https://w3id.org/cntf/ontology#hasIssuedDate
 :hasIssuedDate rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasName
+###  https://w3id.org/cntf/ontology#hasName
 :hasName rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasRefType
+###  https://w3id.org/cntf/ontology#hasRefType
 :hasRefType rdf:type owl:DatatypeProperty ;
             rdfs:range rdfs:Literal .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasSummary
+###  https://w3id.org/cntf/ontology#hasSummary
 :hasSummary rdf:type owl:DatatypeProperty .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasTitle
+###  https://w3id.org/cntf/ontology#hasTitle
 :hasTitle rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#hasURL
+###  https://w3id.org/cntf/ontology#hasURL
 :hasURL rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty .
 
@@ -197,142 +205,116 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Abbreviation
+###  https://w3id.org/cntf/ontology#Abbreviation
 :Abbreviation rdf:type owl:Class ;
               rdfs:subClassOf :Contraction ;
               owl:disjointWith :Acronym .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Acronym
+###  https://w3id.org/cntf/ontology#Acronym
 :Acronym rdf:type owl:Class ;
          rdfs:subClassOf :Contraction .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#BaseEntity
-:BaseEntity rdf:type owl:Class .
+###  https://w3id.org/cntf/ontology#Classification
+:Classification rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Classification
-:Classification rdf:type owl:Class ;
-                rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#ClassificationItem
+:ClassificationItem rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#ClassificationItem
-:ClassificationItem rdf:type owl:Class ;
-                    rdfs:subClassOf :BaseEntity .
-
-
-###  https://ci.mines-stetienne.fr/cntf/ontology#ConferenceAbbreviation
+###  https://w3id.org/cntf/ontology#ConferenceAbbreviation
 :ConferenceAbbreviation rdf:type owl:Class ;
                         rdfs:subClassOf :Abbreviation ;
                         owl:disjointWith :VolumeAbbreviation .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#ConstraintConveyanceMean
-:ConstraintConveyanceMean rdf:type owl:Class ;
-                          rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#ConstraintConveyanceMean
+:ConstraintConveyanceMean rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#ConstraintConveyanceMeanExample
-:ConstraintConveyanceMeanExample rdf:type owl:Class ;
-                                 rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#ConstraintConveyanceMeanExample
+:ConstraintConveyanceMeanExample rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Contraction
-:Contraction rdf:type owl:Class ;
-             rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#Contraction
+:Contraction rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Dimension
+###  https://w3id.org/cntf/ontology#Dimension
 :Dimension rdf:type owl:Class ;
-           rdfs:subClassOf :BaseEntity ;
            rdfs:comment "The dimensions of Content Negotiation."@en ;
            rdfs:label "Dimension"@en .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#FutureUpdate
-:FutureUpdate rdf:type owl:Class ;
-              rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#FutureUpdate
+:FutureUpdate rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Link
-:Link rdf:type owl:Class ;
-      rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#Link
+:Link rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Person
-:Person rdf:type owl:Class ;
-        rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#Person
+:Person rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Protocol
-:Protocol rdf:type owl:Class ;
-          rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#Protocol
+:Protocol rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Reference
-:Reference rdf:type owl:Class ;
-           rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#Reference
+:Reference rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Requirement
-:Requirement rdf:type owl:Class ;
-             rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#Requirement
+:Requirement rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Style
-:Style rdf:type owl:Class ;
-       rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#Style
+:Style rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#StyleAdventage
-:StyleAdventage rdf:type owl:Class ;
-                rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#StyleAdventage
+:StyleAdventage rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#StyleDisadvantage
-:StyleDisadvantage rdf:type owl:Class ;
-                   rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#StyleDisadvantage
+:StyleDisadvantage rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Term
-:Term rdf:type owl:Class ;
-      rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#Term
+:Term rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#TermDescription
-:TermDescription rdf:type owl:Class ;
-                 rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#TermDescription
+:TermDescription rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#TermResemblance
-:TermResemblance rdf:type owl:Class ;
-                 rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#TermResemblance
+:TermResemblance rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#Update
-:Update rdf:type owl:Class ;
-        rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#Update
+:Update rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#UpdateAddition
-:UpdateAddition rdf:type owl:Class ;
-                rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#UpdateAddition
+:UpdateAddition rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#UseCase
+###  https://w3id.org/cntf/ontology#UseCase
 :UseCase rdf:type owl:Class ;
-         rdfs:subClassOf :BaseEntity ;
          rdfs:comment "The class of use cases for Content Negotiation."@en ;
          rdfs:label "Use Case"@en .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#UseCaseSolution
-:UseCaseSolution rdf:type owl:Class ;
-                 rdfs:subClassOf :BaseEntity .
+###  https://w3id.org/cntf/ontology#UseCaseSolution
+:UseCaseSolution rdf:type owl:Class .
 
 
-###  https://ci.mines-stetienne.fr/cntf/ontology#VolumeAbbreviation
+###  https://w3id.org/cntf/ontology#VolumeAbbreviation
 :VolumeAbbreviation rdf:type owl:Class ;
                     rdfs:subClassOf :Abbreviation .
 

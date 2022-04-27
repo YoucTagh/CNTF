@@ -8,7 +8,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class OVisualisationComponent implements OnInit {
 
-  wvo: string = "https://service.tib.eu/webvowl/#iri=https://ci.mines-stetienne.fr/hmas/core.ttl";
+  wvo: string = "https://service.tib.eu/webvowl/#iri=https://w3id.org/cntf/ontology.ttl";
   safeURL?: SafeResourceUrl;
   constructor(private _sanitizer: DomSanitizer) { }
 

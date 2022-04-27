@@ -10,7 +10,7 @@ export class ODocumentationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    window.location.href = 'assets/ontology/o-cntf.html';
+    window.location.href = 'ontology.html';
   }
 
 }

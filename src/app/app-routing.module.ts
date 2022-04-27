@@ -110,9 +110,7 @@ const routes: Routes = [
   { path: 'update', component: UpdateComponent },
   { path: 'additional-info/available-server', component: AvailableServerComponent },
   { path: 'classification', component: ClassificationComponent },
-  { path: 'ontology/visualisation', component: OVisualisationComponent },
-  { path: 'ontology/documentation', component: ODocumentationComponent },
-  { path: 'ontology.ttl', component:OTurtleComponent },
+  { path: 'visualisation', component: OVisualisationComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
