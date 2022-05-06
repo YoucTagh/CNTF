@@ -1,17 +1,17 @@
-@prefix : <https://w3id.org/cntf/ontology#> .
+@prefix : <https://ci.mines-stetienne.fr/cntf/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cntf: <https://w3id.org/cntf/> .
+@prefix cntf: <https://ci.mines-stetienne.fr/cntf/> .
 @prefix obda: <https://w3id.org/obda/vocabulary#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/cntf/ontology#> .
+@base <https://w3id.org/cntf/ontology> .
 
 <https://w3id.org/cntf/ontology> rdf:type owl:Ontology ;
-                                   owl:versionIRI cntf:ontology-0.0.1 ;
-                                   rdfs:label "The CNTF ontology"@en ;
-                                   owl:versionInfo "0.0.1" .
+                                  owl:versionIRI <https://w3id.org/cntf/ontology-0.0.1> ;
+                                  rdfs:label "The CNTF ontology"@en ;
+                                  owl:versionInfo "0.0.1" .
 
 #################################################################
 #    Annotation properties
@@ -40,7 +40,11 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/cntf/ontology#hasCCMean
 :hasCCMean rdf:type owl:ObjectProperty ;
-           rdfs:domain :ConstraintConveyanceMeanExample ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :ClassificationItem
+                                       :ConstraintConveyanceMeanExample
+                                     )
+                       ] ;
            rdfs:range :ConstraintConveyanceMean .
 
 
@@ -75,6 +79,16 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/cntf/ontology#hasReference
 :hasReference rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :ClassificationItem
+                                          :ConstraintConveyanceMeanExample
+                                          :Dimension
+                                          :Style
+                                          :TermDescription
+                                          :TermResemblance
+                                          :UseCase
+                                        )
+                          ] ;
               rdfs:range :Reference ;
               rdfs:comment "links something to one of its references."@en .
 
