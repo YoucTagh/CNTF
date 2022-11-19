@@ -57,8 +57,6 @@ Or the following RDF:
 
 ## Contacts
 
-*creators:*  
-
 **Yousouf Taghzouti**  
 *PhD at EMSE*  
 <yousouf.taghzouti@emse.fr>  
