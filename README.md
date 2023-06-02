@@ -2,6 +2,8 @@
 
 Content Negotiation Theoretical Framework [*CNTF*](https://w3id.org/cntf/) is a website that collects and categorises **C**ontent **N**egotiation *CN* features into different groups: styles, dimensions, etc. CNTF aims to collect use cases of CN, highlight existing solutions if available, or suggest plausible ways to advance them. CNTF also provides an ontology describing its content, and is also intended to be used to disseminate our new proposals for advancing CN, making it a sustainable and up-to-date digital survey of CN.
 
+A [*poster paper*](https://ceur-ws.org/Vol-3254/paper362.pdf) was presented at International Semantic Web Conference (ISWC 2022).
+
 CNTF is developped using [Angular](https://angular.io/), you can refere to the [angular documentation](https://angular.io/docs) if needed when extending this project.
 
 ## Install dependencies 
